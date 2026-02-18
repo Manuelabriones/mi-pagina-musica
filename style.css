@@ -66,3 +66,10 @@ footer {
     padding: 15px;
     color: gray;
 }
+.imagen-centro {
+    display: block;
+    margin: 40px auto;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(30, 215, 96, 0.4);
+}
