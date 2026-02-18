@@ -4,145 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página de Música | Spotify Vibes</title>
+    <title>Mi Página de Música | Spotify vibes</title>
 
-    <!-- Conexión al CSS -->
+    <!-- CSS externo -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente tipo Spotify -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header>
-        <h1>🎧 Mi Mundo Musical</h1>
-
-        <!-- NAV -->
+        <h1>🎵 Mi Mundo Musical</h1>
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#artistas">Artistas</a>
             <a href="#playlist">Playlist</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#formulario">Recomendar</a>
         </nav>
     </header>
-
 
     <!-- MAIN -->
     <main>
 
-        <!-- SECCION INICIO -->
+        <!-- INICIO -->
         <section id="inicio">
             <h2>Bienvenido</h2>
-
             <p>
-                Esta es mi página web sobre música, inspirada en el estilo de Spotify.
-                Aquí podrás ver mis artistas favoritos, playlists y conocer más sobre mi gusto musical.
+                Esta página está inspirada en Spotify. Aquí puedes descubrir música,
+                artistas y compartir tus canciones favoritas.
             </p>
 
-            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d"
-                 alt="Persona escuchando música con audífonos"
-                 width="400">
+            <img src="https://images.unsplash.com/photo-1511376777868-611b54f68947"
+                alt="Persona escuchando música con audífonos"
+                width="400">
         </section>
 
-
-        <!-- SECCION ARTISTAS -->
+        <!-- ARTISTAS -->
         <section id="artistas">
 
-            <h2>🎤 Mis Artistas Favoritos</h2>
+            <h2>🎤 Artistas favoritos</h2>
 
             <article>
-                <h3>Bad Bunny</h3>
-                <p>
-                    Bad Bunny es uno de mis artistas favoritos por su estilo único
-                    y sus canciones que combinan reggaeton, trap y pop.
-                </p>
+                <h3>The Weeknd</h3>
+                <p>Uno de los artistas más influyentes del pop moderno.</p>
 
-                <a href="https://open.spotify.com/" target="_blank">
-                    Escuchar en Spotify
+                <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ" target="_blank">
+                    Ver en Spotify
                 </a>
             </article>
 
-
             <article>
-                <h3>Feid</h3>
-                <p>
-                    Feid tiene canciones con un flow increíble y es uno de los
-                    mejores artistas del género urbano actualmente.
-                </p>
+                <h3>Bad Bunny</h3>
+                <p>Icono global del reggaeton y la música latina.</p>
+
+                <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank">
+                    Ver en Spotify
+                </a>
             </article>
 
-
             <article>
-                <h3>KAROL G</h3>
-                <p>
-                    KAROL G es una artista muy influyente en el reggaeton
-                    y sus canciones son muy populares.
-                </p>
+                <h3>Taylor Swift</h3>
+                <p>Una de las artistas más exitosas del mundo.</p>
+
+                <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02" target="_blank">
+                    Ver en Spotify
+                </a>
             </article>
 
         </section>
 
-
-        <!-- SECCION PLAYLIST -->
+        <!-- PLAYLIST -->
         <section id="playlist">
 
-            <h2>🎵 Mi Playlist Favorita</h2>
-
-            <p>Estas son algunas de mis canciones favoritas:</p>
+            <h2>🎧 Playlist favorita</h2>
 
             <ul>
-                <li>Monaco — Bad Bunny</li>
-                <li>LUNA — Feid</li>
-                <li>Provenza — KAROL G</li>
-                <li>Classy 101 — Feid</li>
-                <li>Ojitos Lindos — Bad Bunny</li>
+                <li>Blinding Lights</li>
+                <li>Starboy</li>
+                <li>Titi me preguntó</li>
+                <li>Anti-Hero</li>
+                <li>Save Your Tears</li>
             </ul>
-
-            <button>
-                Reproducir Playlist
-            </button>
 
         </section>
 
-
         <!-- FORMULARIO -->
-        <section id="contacto">
+        <section id="formulario">
 
             <h2>📩 Recomiéndame música</h2>
 
-            <form>
+            <form id="form-musica">
 
                 <label for="nombre">Nombre:</label>
-                <br>
-                <input type="text" id="nombre" name="nombre">
-                <br><br>
+                <input type="text" id="nombre" required>
 
                 <label for="cancion">Canción recomendada:</label>
-                <br>
-                <input type="text" id="cancion" name="cancion">
-                <br><br>
+                <input type="text" id="cancion" required>
 
-                <button type="submit">
-                    Enviar
-                </button>
+                <button type="submit">Enviar</button>
 
             </form>
 
+            <p id="mensaje"></p>
+
         </section>
 
-
     </main>
-
 
     <!-- FOOTER -->
     <footer>
 
         <p>
-            © 2026 Mi Página de Música | Creado por Manuela Briones
+            Proyecto creado por Manuela Briones |
+            DEV.F 2026
         </p>
 
     </footer>
 
 
+    <!-- JAVASCRIPT FORMULARIO FUNCIONAL -->
+    <script>
+
+        document.getElementById("form-musica").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const nombre = document.getElementById("nombre").value;
+            const cancion = document.getElementById("cancion").value;
+
+            document.getElementById("mensaje").innerHTML =
+                "Gracias " + nombre + "! Escucharé: " + cancion;
+
+            document.getElementById("form-musica").reset();
+
+        });
+
+    </script>
+
 </body>
 
 </html>
+
