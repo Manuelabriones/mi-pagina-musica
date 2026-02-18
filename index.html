@@ -1,61 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Mi Página sobre Música</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página de Música | Spotify Vibes</title>
+
+    <!-- Conexión al CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- HEADER -->
     <header>
-        <h1> Mi Página sobre Música</h1>
+        <h1>🎧 Mi Mundo Musical</h1>
+
+        <!-- NAV -->
         <nav>
-            <a href="#generos">Géneros</a> |
-            <a href="#artistas">Artistas</a> |
+            <a href="#inicio">Inicio</a>
+            <a href="#artistas">Artistas</a>
+            <a href="#playlist">Playlist</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
+
+    <!-- MAIN -->
     <main>
-        <section id="generos">
-            <h2>Géneros que me gustan</h2>
-            <ul>
-                <li>Pop</li>
-                <li>Rock</li>
-                <li>Reggaeton</li>
-                <li>Electrónica</li>
-            </ul>
+
+        <!-- SECCION INICIO -->
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+
+            <p>
+                Esta es mi página web sobre música, inspirada en el estilo de Spotify.
+                Aquí podrás ver mis artistas favoritos, playlists y conocer más sobre mi gusto musical.
+            </p>
+
+            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d"
+                 alt="Persona escuchando música con audífonos"
+                 width="400">
         </section>
 
+
+        <!-- SECCION ARTISTAS -->
         <section id="artistas">
-            <h2>Mis artistas favoritos</h2>
-            <article>
-                <h3>Artista 1</h3>
-                <p>Este es uno de mis artistas favoritos porque su música es inspiradora.</p>
-            </article>
+
+            <h2>🎤 Mis Artistas Favoritos</h2>
 
             <article>
-                <h3>Artista 2</h3>
-                <p>Me gusta este artista por su estilo único y sus letras.</p>
+                <h3>Bad Bunny</h3>
+                <p>
+                    Bad Bunny es uno de mis artistas favoritos por su estilo único
+                    y sus canciones que combinan reggaeton, trap y pop.
+                </p>
+
+                <a href="https://open.spotify.com/" target="_blank">
+                    Escuchar en Spotify
+                </a>
             </article>
+
+
+            <article>
+                <h3>Feid</h3>
+                <p>
+                    Feid tiene canciones con un flow increíble y es uno de los
+                    mejores artistas del género urbano actualmente.
+                </p>
+            </article>
+
+
+            <article>
+                <h3>KAROL G</h3>
+                <p>
+                    KAROL G es una artista muy influyente en el reggaeton
+                    y sus canciones son muy populares.
+                </p>
+            </article>
+
         </section>
 
+
+        <!-- SECCION PLAYLIST -->
+        <section id="playlist">
+
+            <h2>🎵 Mi Playlist Favorita</h2>
+
+            <p>Estas son algunas de mis canciones favoritas:</p>
+
+            <ul>
+                <li>Monaco — Bad Bunny</li>
+                <li>LUNA — Feid</li>
+                <li>Provenza — KAROL G</li>
+                <li>Classy 101 — Feid</li>
+                <li>Ojitos Lindos — Bad Bunny</li>
+            </ul>
+
+            <button>
+                Reproducir Playlist
+            </button>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
         <section id="contacto">
-            <h2>Contacto</h2>
+
+            <h2>📩 Recomiéndame música</h2>
+
             <form>
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre"><br><br>
 
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje"></textarea><br><br>
+                <label for="nombre">Nombre:</label>
+                <br>
+                <input type="text" id="nombre" name="nombre">
+                <br><br>
 
-                <button type="submit">Enviar</button>
+                <label for="cancion">Canción recomendada:</label>
+                <br>
+                <input type="text" id="cancion" name="cancion">
+                <br><br>
+
+                <button type="submit">
+                    Enviar
+                </button>
+
             </form>
+
         </section>
+
+
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Mi Página de Música</p>
+
+        <p>
+            © 2026 Mi Página de Música | Creado por Manuela Briones
+        </p>
+
     </footer>
 
+
 </body>
+
 </html>
