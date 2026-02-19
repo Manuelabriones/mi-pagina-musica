@@ -7,355 +7,337 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mi Página de Música | Spotify vibes</title>
+    <title>Mi Página de Música</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Fuente tipo Spotify -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
+
 <body>
 
-    <!-- HEADER -->
-    <header>
 
-        <h1>Mi Mundo Musical</h1>
+<!-- HEADER -->
+<header>
 
-        <nav>
+    <h1>Mi Mundo Musical</h1>
 
-            <a href="#inicio">Inicio</a>
+    <nav>
 
-            <a href="#artistas">Artistas</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#artistas">Artistas</a>
+        <a href="#playlist">Playlist</a>
+        <a href="#formulario">Recomendar</a>
 
-            <a href="#playlist">Playlist</a>
+    </nav>
 
-            <a href="#formulario">Recomendar</a>
+</header>
 
-        </nav>
 
-    </header>
 
+<!-- MAIN -->
+<main>
 
-    <!-- MAIN -->
-    <main>
 
 
-        <!-- INICIO -->
-        <section id="inicio">
+<!-- INICIO -->
+<section id="inicio">
 
-            <h2>Bienvenido</h2>
+    <h2>Bienvenido</h2>
 
-            <p>
+    <p>
 
-                ¡Hola! Soy Manuela Briones y esta es mi página personal dedicada a mi pasión por la música.
-                La música es una parte muy importante de mi vida, ya que me acompaña en diferentes momentos,
-                ya sea cuando estudio, cuando me relajo o cuando quiero motivarme.
+        ¡Hola! Soy Manuela Briones y esta es mi página personal dedicada a mi pasión por la música.
+        La música forma parte de mi vida diaria, me acompaña en diferentes momentos y refleja mi estado de ánimo.
+        Aquí podrás conocer mis artistas favoritos, descubrir canciones que escucho frecuentemente y calificar
+        mi playlist según tu opinión. También puedes recomendarme nuevas canciones usando el formulario.
+        Este proyecto está inspirado en Spotify y fue creado como parte de mi aprendizaje en desarrollo web.
 
-                En esta página comparto mis artistas favoritos, mi playlist personal y algunas de las canciones
-                que más disfruto escuchar. Cada canción tiene un significado especial y refleja mi estilo musical.
+    </p>
 
-                También puedes interactuar calificando mis canciones con estrellas y recomendándome música nueva
-                usando el formulario. Esta página está inspirada en Spotify y representa mi propio espacio musical.
 
-            </p>
+    <!-- IMAGEN -->
+    <img src="./assets/foto1.png"
+         alt="Imagen musical creada por Manuela"
+         class="imagen-centro">
 
 
-            <img src="./assets/foto1.png" alt="Mi imagen musical" class="imagen-centro">
+</section>
 
 
-        </section>
 
+<!-- ARTISTAS -->
+<section id="artistas">
 
-        <!-- ARTISTAS -->
-        <section id="artistas">
+    <h2>Artistas favoritos</h2>
 
-            <h2>Artistas favoritos</h2>
 
+    <article>
 
-            <article>
-
-                <h3>The Weeknd</h3>
-
-                <p>
-
-                    The Weeknd es uno de mis artistas favoritos por su estilo único,
-                    su voz increíble y sus canciones icónicas.
-
-                </p>
-
-                <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ" target="_blank">
-
-                    Ver en Spotify
-
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>Bad Bunny</h3>
-
-                <p>
-
-                    Bad Bunny es uno de los artistas más importantes del género urbano
-                    y ha revolucionado la música latina.
-
-                </p>
-
-                <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank">
-
-                    Ver en Spotify
-
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>Taylor Swift</h3>
-
-                <p>
-
-                    Taylor Swift es una artista increíble con letras profundas y
-                    una gran conexión con sus fans.
-
-                </p>
-
-                <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02" target="_blank">
-
-                    Ver en Spotify
-
-                </a>
-
-            </article>
-
-
-        </section>
-
-
-
-        <!-- PLAYLIST -->
-        <section id="playlist">
-
-            <h2>Mi Playlist favorita</h2>
-
-            <p>Califica mis canciones seleccionando las estrellas:</p>
-
-
-            <ul>
-
-
-                <li>
-
-                    Blinding Lights
-
-                    <div class="rating">
-
-                        <input type="radio" id="blinding5" name="blinding">
-                        <label for="blinding5">★</label>
-
-                        <input type="radio" id="blinding4" name="blinding">
-                        <label for="blinding4">★</label>
-
-                        <input type="radio" id="blinding3" name="blinding">
-                        <label for="blinding3">★</label>
-
-                        <input type="radio" id="blinding2" name="blinding">
-                        <label for="blinding2">★</label>
-
-                        <input type="radio" id="blinding1" name="blinding">
-                        <label for="blinding1">★</label>
-
-                    </div>
-
-                </li>
-
-
-
-                <li>
-
-                    Starboy
-
-                    <div class="rating">
-
-                        <input type="radio" id="starboy5" name="starboy">
-                        <label for="starboy5">★</label>
-
-                        <input type="radio" id="starboy4" name="starboy">
-                        <label for="starboy4">★</label>
-
-                        <input type="radio" id="starboy3" name="starboy">
-                        <label for="starboy3">★</label>
-
-                        <input type="radio" id="starboy2" name="starboy">
-                        <label for="starboy2">★</label>
-
-                        <input type="radio" id="starboy1" name="starboy">
-                        <label for="starboy1">★</label>
-
-                    </div>
-
-                </li>
-
-
-
-                <li>
-
-                    Tití Me Preguntó
-
-                    <div class="rating">
-
-                        <input type="radio" id="titi5" name="titi">
-                        <label for="titi5">★</label>
-
-                        <input type="radio" id="titi4" name="titi">
-                        <label for="titi4">★</label>
-
-                        <input type="radio" id="titi3" name="titi">
-                        <label for="titi3">★</label>
-
-                        <input type="radio" id="titi2" name="titi">
-                        <label for="titi2">★</label>
-
-                        <input type="radio" id="titi1" name="titi">
-                        <label for="titi1">★</label>
-
-                    </div>
-
-                </li>
-
-
-
-                <li>
-
-                    Anti-Hero
-
-                    <div class="rating">
-
-                        <input type="radio" id="anti5" name="anti">
-                        <label for="anti5">★</label>
-
-                        <input type="radio" id="anti4" name="anti">
-                        <label for="anti4">★</label>
-
-                        <input type="radio" id="anti3" name="anti">
-                        <label for="anti3">★</label>
-
-                        <input type="radio" id="anti2" name="anti">
-                        <label for="anti2">★</label>
-
-                        <input type="radio" id="anti1" name="anti">
-                        <label for="anti1">★</label>
-
-                    </div>
-
-                </li>
-
-
-
-                <li>
-
-                    Save Your Tears
-
-                    <div class="rating">
-
-                        <input type="radio" id="save5" name="save">
-                        <label for="save5">★</label>
-
-                        <input type="radio" id="save4" name="save">
-                        <label for="save4">★</label>
-
-                        <input type="radio" id="save3" name="save">
-                        <label for="save3">★</label>
-
-                        <input type="radio" id="save2" name="save">
-                        <label for="save2">★</label>
-
-                        <input type="radio" id="save1" name="save">
-                        <label for="save1">★</label>
-
-                    </div>
-
-                </li>
-
-
-            </ul>
-
-
-        </section>
-
-
-
-        <!-- FORMULARIO -->
-        <section id="formulario">
-
-            <h2>Recomiéndame música</h2>
-
-
-            <form id="form-musica">
-
-                <label for="nombre">Nombre:</label>
-
-                <input type="text" id="nombre" required>
-
-
-
-                <label for="cancion">Canción recomendada:</label>
-
-                <input type="text" id="cancion" required>
-
-
-
-                <button type="submit">Enviar</button>
-
-            </form>
-
-
-            <p id="mensaje"></p>
-
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- FOOTER -->
-    <footer>
+        <h3>The Weeknd</h3>
 
         <p>
-
-            Proyecto creado por Manuela Briones | DEV.F 2026
-
+            Uno de los artistas más influyentes del pop moderno,
+            conocido por su estilo único y canciones como Blinding Lights.
         </p>
 
-    </footer>
+        <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ" target="_blank">
+            Ver en Spotify
+        </a>
+
+    </article>
 
 
 
-    <!-- SCRIPT -->
-    <script>
+    <article>
 
-        document.getElementById("form-musica").addEventListener("submit", function(event){
+        <h3>Bad Bunny</h3>
 
-            event.preventDefault();
+        <p>
+            Icono global de la música latina, revolucionó el reggaeton
+            con su estilo innovador.
+        </p>
 
-            const nombre = document.getElementById("nombre").value;
+        <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank">
+            Ver en Spotify
+        </a>
 
-            const cancion = document.getElementById("cancion").value;
+    </article>
 
-            document.getElementById("mensaje").innerHTML =
-            "Gracias " + nombre + "! Escucharé: " + cancion;
 
-            this.reset();
+
+    <article>
+
+        <h3>Taylor Swift</h3>
+
+        <p>
+            Cantante reconocida mundialmente por sus letras y evolución musical.
+        </p>
+
+        <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02" target="_blank">
+            Ver en Spotify
+        </a>
+
+    </article>
+
+
+</section>
+
+
+
+<!-- PLAYLIST -->
+<section id="playlist">
+
+    <h2>Mi Playlist favorita</h2>
+
+    <p>Puedes calificar cada canción seleccionando las estrellas:</p>
+
+
+    <ul>
+
+
+        <li>
+
+            Blinding Lights
+
+            <div class="stars">
+
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+
+            </div>
+
+        </li>
+
+
+
+        <li>
+
+            Starboy
+
+            <div class="stars">
+
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+
+            </div>
+
+        </li>
+
+
+
+        <li>
+
+            Titi me preguntó
+
+            <div class="stars">
+
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+
+            </div>
+
+        </li>
+
+
+
+        <li>
+
+            Anti-Hero
+
+            <div class="stars">
+
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+
+            </div>
+
+        </li>
+
+
+
+        <li>
+
+            Save Your Tears
+
+            <div class="stars">
+
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+
+            </div>
+
+        </li>
+
+
+
+    </ul>
+
+</section>
+
+
+
+<!-- FORMULARIO -->
+<section id="formulario">
+
+
+    <h2>Recomiéndame música</h2>
+
+
+    <form id="form-musica">
+
+        <label for="nombre">Nombre:</label>
+
+        <input type="text" id="nombre" required>
+
+
+
+        <label for="cancion">Canción recomendada:</label>
+
+        <input type="text" id="cancion" required>
+
+
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+
+    <p id="mensaje"></p>
+
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+
+        Proyecto creado por Manuela Briones |
+        DEV.F 2026
+
+    </p>
+
+</footer>
+
+
+
+
+<!-- SCRIPT ESTRELLAS -->
+<script>
+
+const stars = document.querySelectorAll('.star');
+
+stars.forEach(star => {
+
+    star.addEventListener('click', () => {
+
+        let value = star.getAttribute('data-value');
+
+        let container = star.parentElement;
+
+        let allStars = container.querySelectorAll('.star');
+
+        allStars.forEach(s => {
+
+            s.classList.toggle(
+                'selected',
+                s.getAttribute('data-value') <= value
+            );
 
         });
 
-    </script>
+    });
+
+});
+
+</script>
+
+
+
+<!-- SCRIPT FORMULARIO -->
+<script>
+
+document.getElementById("form-musica").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const cancion = document.getElementById("cancion").value;
+
+    document.getElementById("mensaje").innerHTML =
+        "Gracias " + nombre + ", escucharé: " + cancion;
+
+    this.reset();
+
+});
+
+</script>
 
 
 

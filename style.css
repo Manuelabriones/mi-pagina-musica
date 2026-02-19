@@ -73,3 +73,29 @@ footer {
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(30, 215, 96, 0.4);
 }
+.stars {
+
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 5px;
+
+}
+
+.star {
+
+    color: gray;
+    transition: 0.2s;
+
+}
+
+.star.selected {
+
+    color: #1DB954;
+
+}
+
+.star:hover {
+
+    transform: scale(1.2);
+
+}
