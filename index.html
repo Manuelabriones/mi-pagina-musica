@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="_attachartes">
+<html lang="es">
 
 <head>
 
@@ -34,113 +34,145 @@
 
 <main>
 
+<!-- INICIO -->
 <section id="inicio">
 
 <h2>Bienvenido</h2>
 
 <p>
-                ¡Hola! Soy Manuela Briones y esta es mi página personal dedicada a mi pasión por la música.
-                La música forma parte de mi vida diaria, me acompaña en diferentes momentos y refleja mi estado de
-                ánimo.
-                Aquí podrás conocer mis artistas favoritos, descubrir canciones que escucho frecuentemente y calificar
-                mi playlist según tu opinión. También puedes recomendarme nuevas canciones usando el formulario.
-                Este proyecto está inspirado en Spotify y fue creado como parte de mi aprendizaje en desarrollo web.
+
+¡Hola! Soy Manuela Briones y esta es mi página personal dedicada a mi pasión por la música.
+La música forma parte de mi vida diaria, me acompaña en diferentes momentos y refleja mi estado de ánimo.
+Aquí podrás conocer mis artistas favoritos, descubrir canciones que escucho frecuentemente y calificar
+mi playlist según tu opinión. También puedes recomendarme nuevas canciones usando el formulario.
+Este proyecto está inspirado en Spotify y fue creado como parte de mi aprendizaje en desarrollo web.
+
 </p>
 
-<img src="./assets/foto1.png" alt="Imagen musical" class="imagen-centro">
+<img src="./assets/foto1.png" alt="Imagen musical creada por Manuela" class="imagen-centro">
 
 </section>
 
 
 
+<!-- ARTISTAS -->
 <section id="artistas">
 
 <h2>Artistas favoritos</h2>
 
 <article>
 <h3>The Weeknd</h3>
-<a href="https://open.spotify.com" target="_blank">Ver en Spotify</a>
+<a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ" target="_blank">
+Ver en Spotify
+</a>
 </article>
 
 <article>
 <h3>Bad Bunny</h3>
-<a href="https://open.spotify.com" target="_blank">Ver en Spotify</a>
+<a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank">
+Ver en Spotify
+</a>
 </article>
 
 <article>
 <h3>Taylor Swift</h3>
-<a href="https://open.spotify.com" target="_blank">Ver en Spotify</a>
+<a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02" target="_blank">
+Ver en Spotify
+</a>
 </article>
 
 </section>
 
+
+
 <!-- PLAYLIST -->
 <section id="playlist">
 
-    <h2>Mi Playlist favorita</h2>
+<h2>Mi Playlist favorita</h2>
 
-    <p>Califica cada canción:</p>
+<p>Califica cada canción seleccionando las estrellas:</p>
 
-    <ul>
+<ul>
 
-        <!-- Just Give Me a Reason -->
-        <li>
+<li>
 
-            Just Give Me a Reason (feat. Nate Ruess) — Pink
+Just Give Me a Reason (feat. Nate Ruess) — Pink
 
-            <div class="stars">
+<div class="stars">
 
-                <span class="star" data-value="1">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="5">★</span>
+<span class="star" data-value="1">★</span>
+<span class="star" data-value="2">★</span>
+<span class="star" data-value="3">★</span>
+<span class="star" data-value="4">★</span>
+<span class="star" data-value="5">★</span>
 
-            </div>
+</div>
 
-        </li>
-
-
-        <!-- BLUE -->
-        <li>
-
-            BLUE — Billie Eilish
-
-            <div class="stars">
-
-                <span class="star" data-value="1">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="5">★</span>
-
-            </div>
-
-        </li>
+</li>
 
 
-        <!-- La Carretera -->
-        <li>
+<li>
 
-            La Carretera — Prince Royce
+BLUE — Billie Eilish
 
-            <div class="stars">
+<div class="stars">
 
-                <span class="star" data-value="1">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="5">★</span>
+<span class="star" data-value="1">★</span>
+<span class="star" data-value="2">★</span>
+<span class="star" data-value="3">★</span>
+<span class="star" data-value="4">★</span>
+<span class="star" data-value="5">★</span>
 
-            </div>
+</div>
 
-        </li>
+</li>
 
-    </ul>
 
-    <p id="mensaje-playlist"></p>
+<li>
+
+La Carretera — Prince Royce
+
+<div class="stars">
+
+<span class="star" data-value="1">★</span>
+<span class="star" data-value="2">★</span>
+<span class="star" data-value="3">★</span>
+<span class="star" data-value="4">★</span>
+<span class="star" data-value="5">★</span>
+
+</div>
+
+</li>
+
+</ul>
+
+<p id="mensaje-playlist"></p>
 
 </section>
+
+
+
+<!-- FORMULARIO -->
+<section id="formulario">
+
+<h2>Recomiéndame música</h2>
+
+<form id="form-musica">
+
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" required>
+
+<label for="cancion">Canción recomendada:</label>
+<input type="text" id="cancion" required>
+
+<button type="submit">Enviar</button>
+
+</form>
+
+<p id="mensaje"></p>
+
+</section>
+
 
 
 </main>
@@ -149,7 +181,7 @@
 
 <footer>
 
-<p>Proyecto creado por Manuela Briones | DEV.F</p>
+<p>Proyecto creado por Manuela Briones | DEV.F 2026</p>
 
 </footer>
 
@@ -165,75 +197,71 @@ let califico = false;
 // seleccionar estrellas
 stars.forEach(star => {
 
-    star.addEventListener('click', () => {
+star.addEventListener('click', () => {
 
-        califico = true;
+califico = true;
 
-        let value = star.getAttribute('data-value');
+let value = star.getAttribute('data-value');
 
-        let container = star.parentElement;
+let container = star.parentElement;
 
-        let allStars = container.querySelectorAll('.star');
+let allStars = container.querySelectorAll('.star');
 
-        allStars.forEach(s => {
+allStars.forEach(s => {
 
-            s.classList.toggle(
-                'selected',
-                s.getAttribute('data-value') <= value
-            );
-
-        });
-
-    });
+s.classList.toggle(
+'selected',
+s.getAttribute('data-value') <= value
+);
 
 });
 
+});
+
+});
 
 
 
 // FORMULARIO SIN REFRESH
 document.getElementById("form-musica").addEventListener("submit", function(event){
 
-    event.preventDefault();
+event.preventDefault();
 
-    let nombre = document.getElementById("nombre").value;
-    let cancion = document.getElementById("cancion").value;
+let nombre = document.getElementById("nombre").value;
+let cancion = document.getElementById("cancion").value;
 
-    let mensajePlaylist = document.getElementById("mensaje-playlist");
-
-
-    // mensaje recomendación
-    document.getElementById("mensaje").innerHTML =
-    "Gracias " + nombre + " por recomendar: " + cancion;
+let mensajePlaylist = document.getElementById("mensaje-playlist");
 
 
-    // SI calificó
-    if(califico){
-
-        mensajePlaylist.innerHTML =
-        "Gracias por calificar mi playlist";
-
-    }
-
-    // SI NO calificó → limpiar mensaje anterior
-    else{
-
-        mensajePlaylist.innerHTML = "";
-
-    }
+// mensaje recomendación
+document.getElementById("mensaje").innerHTML =
+"Gracias " + nombre + " por recomendar: " + cancion;
 
 
-    // borrar estrellas
-    stars.forEach(s=>{
-        s.classList.remove('selected');
-    });
+// mostrar mensaje solo si calificó
+if(califico){
+
+mensajePlaylist.innerHTML =
+"Gracias por calificar mi playlist";
+
+}else{
+
+mensajePlaylist.innerHTML = "";
+
+}
 
 
-    califico = false;
+// borrar estrellas
+stars.forEach(s=>{
+s.classList.remove('selected');
+});
 
 
-    // limpiar formulario
-    this.reset();
+califico = false;
+
+
+// limpiar formulario
+this.reset();
 
 });
 
