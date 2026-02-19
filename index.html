@@ -4,20 +4,18 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mi Página de Música | Spotify vibes</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Fuente tipo Spotify -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-
 
     <!-- HEADER -->
     <header>
@@ -27,8 +25,11 @@
         <nav>
 
             <a href="#inicio">Inicio</a>
+
             <a href="#artistas">Artistas</a>
+
             <a href="#playlist">Playlist</a>
+
             <a href="#formulario">Recomendar</a>
 
         </nav>
@@ -36,10 +37,8 @@
     </header>
 
 
-
     <!-- MAIN -->
     <main>
-
 
 
         <!-- INICIO -->
@@ -50,26 +49,22 @@
             <p>
 
                 ¡Hola! Soy Manuela Briones y esta es mi página personal dedicada a mi pasión por la música.
-                La música es una parte importante de mi vida porque me ayuda a expresar emociones,
-                concentrarme y disfrutar diferentes momentos del día.
+                La música es una parte muy importante de mi vida, ya que me acompaña en diferentes momentos,
+                ya sea cuando estudio, cuando me relajo o cuando quiero motivarme.
 
-                En esta página encontrarás algunos de mis artistas favoritos, una playlist con canciones
-                que escucho frecuentemente y también un formulario donde puedes recomendarme música nueva.
+                En esta página comparto mis artistas favoritos, mi playlist personal y algunas de las canciones
+                que más disfruto escuchar. Cada canción tiene un significado especial y refleja mi estilo musical.
 
-                Mi objetivo es compartir mi estilo musical y descubrir nuevas canciones gracias a las
-                recomendaciones de otras personas.
+                También puedes interactuar calificando mis canciones con estrellas y recomendándome música nueva
+                usando el formulario. Esta página está inspirada en Spotify y representa mi propio espacio musical.
 
             </p>
 
 
-            <img src="./assets/foto1.png"
-                alt="Imagen musical creada por Manuela"
-                class="imagen-centro">
+            <img src="./assets/foto1.png" alt="Mi imagen musical" class="imagen-centro">
 
 
         </section>
-
-
 
 
         <!-- ARTISTAS -->
@@ -78,27 +73,24 @@
             <h2>Artistas favoritos</h2>
 
 
-
             <article>
 
                 <h3>The Weeknd</h3>
 
                 <p>
 
-                    The Weeknd es uno de los artistas más influyentes del pop moderno.
-                    Su estilo mezcla pop, R&B y música electrónica.
+                    The Weeknd es uno de mis artistas favoritos por su estilo único,
+                    su voz increíble y sus canciones icónicas.
 
                 </p>
 
-                <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
-                    target="_blank">
+                <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ" target="_blank">
 
-                    Ver perfil en Spotify
+                    Ver en Spotify
 
                 </a>
 
             </article>
-
 
 
             <article>
@@ -107,20 +99,18 @@
 
                 <p>
 
-                    Bad Bunny es un artista latino reconocido mundialmente.
-                    Ha revolucionado el reggaeton con su estilo único.
+                    Bad Bunny es uno de los artistas más importantes del género urbano
+                    y ha revolucionado la música latina.
 
                 </p>
 
-                <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
-                    target="_blank">
+                <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank">
 
-                    Ver perfil en Spotify
+                    Ver en Spotify
 
                 </a>
 
             </article>
-
 
 
             <article>
@@ -129,15 +119,14 @@
 
                 <p>
 
-                    Taylor Swift es una de las artistas más exitosas del mundo.
-                    Sus canciones cuentan historias emocionales y personales.
+                    Taylor Swift es una artista increíble con letras profundas y
+                    una gran conexión con sus fans.
 
                 </p>
 
-                <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
-                    target="_blank">
+                <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02" target="_blank">
 
-                    Ver perfil en Spotify
+                    Ver en Spotify
 
                 </a>
 
@@ -148,24 +137,15 @@
 
 
 
-
-
         <!-- PLAYLIST -->
         <section id="playlist">
 
-            <h2>Playlist favorita</h2>
+            <h2>Mi Playlist favorita</h2>
 
-            <p>
-
-                Esta es una lista de algunas de mis canciones favoritas.
-                Puedes calificarlas seleccionando las estrellas según cuánto te gusten.
-
-            </p>
-
+            <p>Califica mis canciones seleccionando las estrellas:</p>
 
 
             <ul>
-
 
 
                 <li>
@@ -174,18 +154,24 @@
 
                     <div class="rating">
 
-                        <span>Calificar:</span>
+                        <input type="radio" id="blinding5" name="blinding">
+                        <label for="blinding5">★</label>
 
-                        <input type="radio" name="blinding" value="5"> ⭐
-                        <input type="radio" name="blinding" value="4"> ⭐
-                        <input type="radio" name="blinding" value="3"> ⭐
-                        <input type="radio" name="blinding" value="2"> ⭐
-                        <input type="radio" name="blinding" value="1"> ⭐
+                        <input type="radio" id="blinding4" name="blinding">
+                        <label for="blinding4">★</label>
+
+                        <input type="radio" id="blinding3" name="blinding">
+                        <label for="blinding3">★</label>
+
+                        <input type="radio" id="blinding2" name="blinding">
+                        <label for="blinding2">★</label>
+
+                        <input type="radio" id="blinding1" name="blinding">
+                        <label for="blinding1">★</label>
 
                     </div>
 
                 </li>
-
 
 
 
@@ -195,39 +181,51 @@
 
                     <div class="rating">
 
-                        <span>Calificar:</span>
+                        <input type="radio" id="starboy5" name="starboy">
+                        <label for="starboy5">★</label>
 
-                        <input type="radio" name="starboy" value="5"> ⭐
-                        <input type="radio" name="starboy" value="4"> ⭐
-                        <input type="radio" name="starboy" value="3"> ⭐
-                        <input type="radio" name="starboy" value="2"> ⭐
-                        <input type="radio" name="starboy" value="1"> ⭐
+                        <input type="radio" id="starboy4" name="starboy">
+                        <label for="starboy4">★</label>
+
+                        <input type="radio" id="starboy3" name="starboy">
+                        <label for="starboy3">★</label>
+
+                        <input type="radio" id="starboy2" name="starboy">
+                        <label for="starboy2">★</label>
+
+                        <input type="radio" id="starboy1" name="starboy">
+                        <label for="starboy1">★</label>
 
                     </div>
 
                 </li>
-
 
 
 
                 <li>
 
-                    Tití me preguntó
+                    Tití Me Preguntó
 
                     <div class="rating">
 
-                        <span>Calificar:</span>
+                        <input type="radio" id="titi5" name="titi">
+                        <label for="titi5">★</label>
 
-                        <input type="radio" name="titi" value="5"> ⭐
-                        <input type="radio" name="titi" value="4"> ⭐
-                        <input type="radio" name="titi" value="3"> ⭐
-                        <input type="radio" name="titi" value="2"> ⭐
-                        <input type="radio" name="titi" value="1"> ⭐
+                        <input type="radio" id="titi4" name="titi">
+                        <label for="titi4">★</label>
+
+                        <input type="radio" id="titi3" name="titi">
+                        <label for="titi3">★</label>
+
+                        <input type="radio" id="titi2" name="titi">
+                        <label for="titi2">★</label>
+
+                        <input type="radio" id="titi1" name="titi">
+                        <label for="titi1">★</label>
 
                     </div>
 
                 </li>
-
 
 
 
@@ -237,18 +235,24 @@
 
                     <div class="rating">
 
-                        <span>Calificar:</span>
+                        <input type="radio" id="anti5" name="anti">
+                        <label for="anti5">★</label>
 
-                        <input type="radio" name="antihero" value="5"> ⭐
-                        <input type="radio" name="antihero" value="4"> ⭐
-                        <input type="radio" name="antihero" value="3"> ⭐
-                        <input type="radio" name="antihero" value="2"> ⭐
-                        <input type="radio" name="antihero" value="1"> ⭐
+                        <input type="radio" id="anti4" name="anti">
+                        <label for="anti4">★</label>
+
+                        <input type="radio" id="anti3" name="anti">
+                        <label for="anti3">★</label>
+
+                        <input type="radio" id="anti2" name="anti">
+                        <label for="anti2">★</label>
+
+                        <input type="radio" id="anti1" name="anti">
+                        <label for="anti1">★</label>
 
                     </div>
 
                 </li>
-
 
 
 
@@ -258,26 +262,30 @@
 
                     <div class="rating">
 
-                        <span>Calificar:</span>
+                        <input type="radio" id="save5" name="save">
+                        <label for="save5">★</label>
 
-                        <input type="radio" name="saveyourtears" value="5"> ⭐
-                        <input type="radio" name="saveyourtears" value="4"> ⭐
-                        <input type="radio" name="saveyourtears" value="3"> ⭐
-                        <input type="radio" name="saveyourtears" value="2"> ⭐
-                        <input type="radio" name="saveyourtears" value="1"> ⭐
+                        <input type="radio" id="save4" name="save">
+                        <label for="save4">★</label>
+
+                        <input type="radio" id="save3" name="save">
+                        <label for="save3">★</label>
+
+                        <input type="radio" id="save2" name="save">
+                        <label for="save2">★</label>
+
+                        <input type="radio" id="save1" name="save">
+                        <label for="save1">★</label>
 
                     </div>
 
                 </li>
 
 
-
             </ul>
 
 
         </section>
-
-
 
 
 
@@ -289,29 +297,19 @@
 
             <form id="form-musica">
 
-
                 <label for="nombre">Nombre:</label>
 
-                <input type="text"
-                    id="nombre"
-                    required>
+                <input type="text" id="nombre" required>
 
 
 
                 <label for="cancion">Canción recomendada:</label>
 
-                <input type="text"
-                    id="cancion"
-                    required>
+                <input type="text" id="cancion" required>
 
 
 
-                <button type="submit">
-
-                    Enviar recomendación
-
-                </button>
-
+                <button type="submit">Enviar</button>
 
             </form>
 
@@ -322,11 +320,7 @@
         </section>
 
 
-
-
     </main>
-
-
 
 
 
@@ -335,8 +329,7 @@
 
         <p>
 
-            Proyecto creado por Manuela Briones  
-            DEV.F 2026  
+            Proyecto creado por Manuela Briones | DEV.F 2026
 
         </p>
 
@@ -344,34 +337,23 @@
 
 
 
-
-
-    <!-- JAVASCRIPT -->
+    <!-- SCRIPT -->
     <script>
 
-
-        document.getElementById("form-musica").addEventListener("submit", function(event) {
+        document.getElementById("form-musica").addEventListener("submit", function(event){
 
             event.preventDefault();
 
-            const nombre =
-                document.getElementById("nombre").value;
+            const nombre = document.getElementById("nombre").value;
 
-            const cancion =
-                document.getElementById("cancion").value;
-
+            const cancion = document.getElementById("cancion").value;
 
             document.getElementById("mensaje").innerHTML =
+            "Gracias " + nombre + "! Escucharé: " + cancion;
 
-                "Gracias " + nombre +
-                ", escucharé tu recomendación: " +
-                cancion;
-
-
-            document.getElementById("form-musica").reset();
+            this.reset();
 
         });
-
 
     </script>
 
