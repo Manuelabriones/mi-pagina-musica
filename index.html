@@ -39,9 +39,12 @@
 <h2>Bienvenido</h2>
 
 <p>
-Soy Manuela Briones y esta página está inspirada en Spotify.
-Aquí puedes descubrir mis canciones favoritas, calificar mi playlist
-y recomendarme música nueva.
+                ¡Hola! Soy Manuela Briones y esta es mi página personal dedicada a mi pasión por la música.
+                La música forma parte de mi vida diaria, me acompaña en diferentes momentos y refleja mi estado de
+                ánimo.
+                Aquí podrás conocer mis artistas favoritos, descubrir canciones que escucho frecuentemente y calificar
+                mi playlist según tu opinión. También puedes recomendarme nuevas canciones usando el formulario.
+                Este proyecto está inspirado en Spotify y fue creado como parte de mi aprendizaje en desarrollo web.
 </p>
 
 <img src="./assets/foto1.png" alt="Imagen musical" class="imagen-centro">
@@ -173,11 +176,12 @@ Anti-Hero
 
 <script>
 
-// detectar estrellas
 const stars = document.querySelectorAll('.star');
 
 let califico = false;
 
+
+// seleccionar estrellas
 stars.forEach(star => {
 
 star.addEventListener('click', () => {
@@ -206,19 +210,22 @@ s.getAttribute('data-value') <= value
 
 
 
-// formulario
-document.getElementById("form-musica").addEventListener("submit", function(e){
+// FORMULARIO SIN REFRESH
+document.getElementById("form-musica").addEventListener("submit", function(event){
 
-e.preventDefault();
+event.preventDefault(); // 🚫 evita refresh
+
 
 let nombre = document.getElementById("nombre").value;
 let cancion = document.getElementById("cancion").value;
 
+
+// mensaje recomendación
 document.getElementById("mensaje").innerHTML =
 "Gracias " + nombre + " por recomendar: " + cancion;
 
 
-// SI calificó playlist
+// mensaje playlist
 if(califico){
 
 document.getElementById("mensaje-playlist").innerHTML =
@@ -234,6 +241,8 @@ califico = false;
 
 }
 
+
+// limpiar formulario
 this.reset();
 
 });
