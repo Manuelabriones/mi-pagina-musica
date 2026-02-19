@@ -14,7 +14,9 @@
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -32,7 +34,9 @@
 </header>
 
 
+
 <main>
+
 
 <!-- INICIO -->
 <section id="inicio">
@@ -52,6 +56,9 @@ Este proyecto está inspirado en Spotify y fue creado como parte de mi aprendiza
 <img src="./assets/foto1.png" alt="Imagen musical creada por Manuela" class="imagen-centro">
 
 </section>
+
+
+
 <!-- ARTISTAS -->
 <section id="artistas">
 
@@ -62,9 +69,7 @@ Este proyecto está inspirado en Spotify y fue creado como parte de mi aprendiza
 <h3>Morat</h3>
 
 <p>
-Morat es una banda colombiana de pop latino conocida por sus letras emotivas
-y su estilo único que combina guitarras acústicas con sonidos modernos.
-Sus canciones transmiten historias reales sobre el amor y la vida.
+Banda colombiana de pop latino conocida por sus letras emotivas y su estilo único.
 </p>
 
 <a href="https://open.spotify.com/artist/5C4PDR4LnhZTbVnKWXuDKD" target="_blank">
@@ -80,12 +85,10 @@ Ver en Spotify
 <h3>Reik</h3>
 
 <p>
-Reik es un grupo mexicano de pop romántico reconocido por sus baladas
-y su evolución hacia sonidos más modernos. Sus canciones son muy populares
-en toda Latinoamérica.
+Grupo mexicano famoso por sus baladas románticas y canciones populares.
 </p>
 
-<a href="https://open.spotify.com/intl-es/artist/0vR2qb8m9WHeZ5ByCbimq2?si=eEurNJQcQB2ywwxRl61VfQ" target="_blank">
+<a href="https://open.spotify.com/artist/0UZ5XE0lPHrJqGFO3zLkqF" target="_blank">
 Ver en Spotify
 </a>
 
@@ -94,19 +97,23 @@ Ver en Spotify
 
 
 <article>
+
 <h3>Jesse & Joy</h3>
 
 <p>
-Jesse & Joy es un dúo mexicano famoso por sus canciones emotivas,
-su gran talento vocal y letras profundas que conectan con muchas personas.
+Dúo mexicano reconocido por sus canciones emotivas y su gran talento vocal.
 </p>
 
-<a href="https://open.spotify.com/intl-es/artist/1mX1TWKpNxDSAH16LgDfiR?si=a-V7r3_IQYKtZXS_bxVwtg target="_blank">
+<a href="https://open.spotify.com/artist/1mX1TWKpNxDSAH16LGV8N4" target="_blank">
 Ver en Spotify
 </a>
 
 </article>
+
 </section>
+
+
+
 
 <!-- PLAYLIST -->
 <section id="playlist">
@@ -119,7 +126,7 @@ Ver en Spotify
 
 <li>
 
-Just Give Me a Reason (feat. Nate Ruess) — Pink
+Just Give Me a Reason — Pink
 
 <div class="stars">
 
@@ -169,9 +176,10 @@ La Carretera — Prince Royce
 
 </ul>
 
-<p id="mensaje-playlist"></p>
+<p id="mensaje-playlist" class="mensaje-playlist"></p>
 
 </section>
+
 
 
 
@@ -183,10 +191,14 @@ La Carretera — Prince Royce
 <form id="form-musica">
 
 <label for="nombre">Nombre:</label>
+
 <input type="text" id="nombre" required>
 
+
 <label for="cancion">Canción recomendada:</label>
+
 <input type="text" id="cancion" required>
+
 
 <button type="submit">Enviar</button>
 
@@ -202,11 +214,13 @@ La Carretera — Prince Royce
 
 
 
+
 <footer>
 
 <p>Proyecto creado por Manuela Briones | DEV.F 2026</p>
 
 </footer>
+
 
 
 
@@ -245,6 +259,7 @@ s.getAttribute('data-value') <= value
 
 
 
+
 // FORMULARIO SIN REFRESH
 document.getElementById("form-musica").addEventListener("submit", function(event){
 
@@ -261,15 +276,26 @@ document.getElementById("mensaje").innerHTML =
 "Gracias " + nombre + " por recomendar: " + cancion;
 
 
-// mostrar mensaje solo si calificó
+// mensaje playlist estilo Spotify
 if(califico){
 
 mensajePlaylist.innerHTML =
 "Gracias por calificar mi playlist";
 
+mensajePlaylist.classList.add("mostrar");
+
+
+setTimeout(()=>{
+
+mensajePlaylist.classList.remove("mostrar");
+
+mensajePlaylist.innerHTML="";
+
+},3000);
+
 }else{
 
-mensajePlaylist.innerHTML = "";
+mensajePlaylist.innerHTML="";
 
 }
 
@@ -289,6 +315,7 @@ this.reset();
 });
 
 </script>
+
 
 
 </body>
