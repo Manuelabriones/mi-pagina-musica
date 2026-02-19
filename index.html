@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mi Página de Música</title>
@@ -17,9 +16,7 @@
 
 </head>
 
-
 <body>
-
 
 <!-- HEADER -->
 <header>
@@ -27,21 +24,17 @@
     <h1>Mi Mundo Musical</h1>
 
     <nav>
-
         <a href="#inicio">Inicio</a>
         <a href="#artistas">Artistas</a>
         <a href="#playlist">Playlist</a>
         <a href="#formulario">Recomendar</a>
-
     </nav>
 
 </header>
 
 
-
 <!-- MAIN -->
 <main>
-
 
 
 <!-- INICIO -->
@@ -50,24 +43,15 @@
     <h2>Bienvenido</h2>
 
     <p>
-
         ¡Hola! Soy Manuela Briones y esta es mi página personal dedicada a mi pasión por la música.
         La música forma parte de mi vida diaria, me acompaña en diferentes momentos y refleja mi estado de ánimo.
-        Aquí podrás conocer mis artistas favoritos, descubrir canciones que escucho frecuentemente y calificar
-        mi playlist según tu opinión. También puedes recomendarme nuevas canciones usando el formulario.
+        Aquí podrás conocer mis artistas favoritos, descubrir canciones que escucho frecuentemente y calificar mi playlist.
         Este proyecto está inspirado en Spotify y fue creado como parte de mi aprendizaje en desarrollo web.
-
     </p>
 
-
-    <!-- IMAGEN -->
-    <img src="./assets/foto1.png"
-         alt="Imagen musical creada por Manuela"
-         class="imagen-centro">
-
+    <img src="./assets/foto1.png" alt="Imagen musical creada por Manuela" class="imagen-centro">
 
 </section>
-
 
 
 <!-- ARTISTAS -->
@@ -75,58 +59,34 @@
 
     <h2>Artistas favoritos</h2>
 
-
     <article>
-
         <h3>The Weeknd</h3>
-
-        <p>
-            Uno de los artistas más influyentes del pop moderno,
-            conocido por su estilo único y canciones como Blinding Lights.
-        </p>
+        <p>Uno de los artistas más influyentes del pop moderno.</p>
 
         <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ" target="_blank">
             Ver en Spotify
         </a>
-
     </article>
 
-
-
     <article>
-
         <h3>Bad Bunny</h3>
-
-        <p>
-            Icono global de la música latina, revolucionó el reggaeton
-            con su estilo innovador.
-        </p>
+        <p>Icono global de la música latina.</p>
 
         <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank">
             Ver en Spotify
         </a>
-
     </article>
 
-
-
     <article>
-
         <h3>Taylor Swift</h3>
-
-        <p>
-            Cantante reconocida mundialmente por sus letras y evolución musical.
-        </p>
+        <p>Una de las artistas más exitosas del mundo.</p>
 
         <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02" target="_blank">
             Ver en Spotify
         </a>
-
     </article>
 
-
 </section>
-
 
 
 <!-- PLAYLIST -->
@@ -136,156 +96,103 @@
 
     <p>Puedes calificar cada canción seleccionando las estrellas:</p>
 
-
     <ul>
 
-
         <li>
-
             Blinding Lights
-
             <div class="stars">
-
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
                 <span class="star" data-value="3">★</span>
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
-
             </div>
-
         </li>
 
-
-
         <li>
-
             Starboy
-
             <div class="stars">
-
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
                 <span class="star" data-value="3">★</span>
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
-
             </div>
-
         </li>
 
-
-
         <li>
-
             Titi me preguntó
-
             <div class="stars">
-
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
                 <span class="star" data-value="3">★</span>
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
-
             </div>
-
         </li>
 
-
-
         <li>
-
             Anti-Hero
-
             <div class="stars">
-
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
                 <span class="star" data-value="3">★</span>
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
-
             </div>
-
         </li>
-
-
 
         <li>
-
             Save Your Tears
-
             <div class="stars">
-
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
                 <span class="star" data-value="3">★</span>
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
-
             </div>
-
         </li>
-
-
 
     </ul>
 
-</section>
+    <!-- MENSAJE PLAYLIST -->
+    <p id="mensaje-playlist"></p>
 
+</section>
 
 
 <!-- FORMULARIO -->
 <section id="formulario">
 
-
     <h2>Recomiéndame música</h2>
-
 
     <form id="form-musica">
 
-        <label for="nombre">Nombre:</label>
-
+        <label>Nombre:</label>
         <input type="text" id="nombre" required>
 
-
-
-        <label for="cancion">Canción recomendada:</label>
-
+        <label>Canción recomendada:</label>
         <input type="text" id="cancion" required>
-
-
 
         <button type="submit">Enviar</button>
 
     </form>
 
-
     <p id="mensaje"></p>
-
 
 </section>
 
-
-
 </main>
-
 
 
 <!-- FOOTER -->
 <footer>
 
     <p>
-
-        Proyecto creado por Manuela Briones |
-        DEV.F 2026
-
+        Proyecto creado por Manuela Briones | DEV.F 2026
     </p>
 
 </footer>
-
-
 
 
 <!-- SCRIPT ESTRELLAS -->
@@ -303,6 +210,8 @@ stars.forEach(star => {
 
         let allStars = container.querySelectorAll('.star');
 
+
+        // llenar estrellas
         allStars.forEach(s => {
 
             s.classList.toggle(
@@ -312,6 +221,23 @@ stars.forEach(star => {
 
         });
 
+
+        // mostrar mensaje
+        document.getElementById("mensaje-playlist").innerHTML =
+            "Gracias por calificar mi playlist";
+
+
+        // resetear estrellas después
+        setTimeout(() => {
+
+            allStars.forEach(s => {
+
+                s.classList.remove('selected');
+
+            });
+
+        }, 1200);
+
     });
 
 });
@@ -319,16 +245,15 @@ stars.forEach(star => {
 </script>
 
 
-
 <!-- SCRIPT FORMULARIO -->
 <script>
 
-document.getElementById("form-musica").addEventListener("submit", function(event) {
+document.getElementById("form-musica").addEventListener("submit", function(event){
 
     event.preventDefault();
 
-    const nombre = document.getElementById("nombre").value;
-    const cancion = document.getElementById("cancion").value;
+    let nombre = document.getElementById("nombre").value;
+    let cancion = document.getElementById("cancion").value;
 
     document.getElementById("mensaje").innerHTML =
         "Gracias " + nombre + ", escucharé: " + cancion;
@@ -340,7 +265,5 @@ document.getElementById("form-musica").addEventListener("submit", function(event
 </script>
 
 
-
 </body>
-
 </html>
