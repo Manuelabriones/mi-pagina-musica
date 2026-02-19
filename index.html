@@ -184,26 +184,26 @@ let califico = false;
 // seleccionar estrellas
 stars.forEach(star => {
 
-star.addEventListener('click', () => {
+    star.addEventListener('click', () => {
 
-califico = true;
+        califico = true;
 
-let value = star.getAttribute('data-value');
+        let value = star.getAttribute('data-value');
 
-let container = star.parentElement;
+        let container = star.parentElement;
 
-let allStars = container.querySelectorAll('.star');
+        let allStars = container.querySelectorAll('.star');
 
-allStars.forEach(s => {
+        allStars.forEach(s => {
 
-s.classList.toggle(
-'selected',
-s.getAttribute('data-value') <= value
-);
+            s.classList.toggle(
+                'selected',
+                s.getAttribute('data-value') <= value
+            );
 
-});
+        });
 
-});
+    });
 
 });
 
@@ -213,41 +213,51 @@ s.getAttribute('data-value') <= value
 // FORMULARIO SIN REFRESH
 document.getElementById("form-musica").addEventListener("submit", function(event){
 
-event.preventDefault(); // 🚫 evita refresh
+    event.preventDefault();
+
+    let nombre = document.getElementById("nombre").value;
+    let cancion = document.getElementById("cancion").value;
+
+    let mensajePlaylist = document.getElementById("mensaje-playlist");
 
 
-let nombre = document.getElementById("nombre").value;
-let cancion = document.getElementById("cancion").value;
+    // mensaje recomendación
+    document.getElementById("mensaje").innerHTML =
+    "Gracias " + nombre + " por recomendar: " + cancion;
 
 
-// mensaje recomendación
-document.getElementById("mensaje").innerHTML =
-"Gracias " + nombre + " por recomendar: " + cancion;
+    // SI calificó
+    if(califico){
+
+        mensajePlaylist.innerHTML =
+        "Gracias por calificar mi playlist";
+
+    }
+
+    // SI NO calificó → limpiar mensaje anterior
+    else{
+
+        mensajePlaylist.innerHTML = "";
+
+    }
 
 
-// mensaje playlist
-if(califico){
-
-document.getElementById("mensaje-playlist").innerHTML =
-"Gracias por calificar mi playlist";
-
-
-// borrar estrellas
-stars.forEach(s=>{
-s.classList.remove('selected');
-});
-
-califico = false;
-
-}
+    // borrar estrellas
+    stars.forEach(s=>{
+        s.classList.remove('selected');
+    });
 
 
-// limpiar formulario
-this.reset();
+    califico = false;
+
+
+    // limpiar formulario
+    this.reset();
 
 });
 
 </script>
+
 
 </body>
 </html>
