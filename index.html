@@ -152,10 +152,14 @@ Ver en Spotify
 
 <h2>Mi Playlist favorita</h2>
 
-<p>Califica cada canción:</p>
+<p>
+Puedes calificar cada canción y también reproducirla:
+</p>
 
 <ul class="playlist">
 
+
+<!-- Pink -->
 <li class="cancion">
 
 <img src="./assets/pink.jpg" alt="Just Give Me a Reason">
@@ -165,6 +169,12 @@ Ver en Spotify
 Pink
 </div>
 
+<button onclick="reproducir('audio1')" class="btn-play">
+▶
+</button>
+
+<audio id="audio1" src="./audio/pink.mp3"></audio>
+
 <div class="stars">
 <span class="star" data-value="1">★</span>
 <span class="star" data-value="2">★</span>
@@ -177,6 +187,7 @@ Pink
 
 
 
+<!-- Billie -->
 <li class="cancion">
 
 <img src="./assets/billie.jpg" alt="BLUE">
@@ -186,6 +197,12 @@ Pink
 Billie Eilish
 </div>
 
+<button onclick="reproducir('audio2')" class="btn-play">
+▶
+</button>
+
+<audio id="audio2" src="./audio/blue.mp3"></audio>
+
 <div class="stars">
 <span class="star" data-value="1">★</span>
 <span class="star" data-value="2">★</span>
@@ -198,6 +215,7 @@ Billie Eilish
 
 
 
+<!-- Royce -->
 <li class="cancion">
 
 <img src="./assets/royce.jpg" alt="La Carretera">
@@ -207,6 +225,12 @@ Billie Eilish
 Prince Royce
 </div>
 
+<button onclick="reproducir('audio3')" class="btn-play">
+▶
+</button>
+
+<audio id="audio3" src="./audio/carretera.mp3"></audio>
+
 <div class="stars">
 <span class="star" data-value="1">★</span>
 <span class="star" data-value="2">★</span>
@@ -216,6 +240,7 @@ Prince Royce
 </div>
 
 </li>
+
 
 </ul>
 
@@ -260,18 +285,37 @@ Prince Royce
 <p>Proyecto creado por Manuela Briones | DEV.F 2026</p>
 
 </footer>
-
-
-
-
 <script>
+
+/* -------- AUDIO -------- */
+
+let actual = null;
+
+function reproducir(id){
+
+let audio = document.getElementById(id);
+
+if(actual && actual !== audio){
+actual.pause();
+actual.currentTime = 0;
+}
+
+if(audio.paused){
+audio.play();
+actual = audio;
+}else{
+audio.pause();
+}
+
+}
+
+
+/* -------- ESTRELLAS -------- */
 
 const stars = document.querySelectorAll('.star');
 
 let califico = false;
 
-
-// seleccionar estrellas
 stars.forEach(star => {
 
 star.addEventListener('click', () => {
@@ -298,25 +342,24 @@ s.getAttribute('data-value') <= value
 });
 
 
+/* -------- FORMULARIO -------- */
 
-
-// FORMULARIO SIN REFRESH
 document.getElementById("form-musica").addEventListener("submit", function(event){
 
 event.preventDefault();
 
 let nombre = document.getElementById("nombre").value;
+
 let cancion = document.getElementById("cancion").value;
 
 let mensajePlaylist = document.getElementById("mensaje-playlist");
 
-
-// mensaje recomendación
 document.getElementById("mensaje").innerHTML =
 "Gracias " + nombre + " por recomendar: " + cancion;
 
 
-// mensaje playlist estilo Spotify
+/* mostrar mensaje playlist solo si calificó */
+
 if(califico){
 
 mensajePlaylist.innerHTML =
@@ -324,32 +367,27 @@ mensajePlaylist.innerHTML =
 
 mensajePlaylist.classList.add("mostrar");
 
-
-setTimeout(()=>{
-
-mensajePlaylist.classList.remove("mostrar");
-
-mensajePlaylist.innerHTML="";
-
-},3000);
-
 }else{
 
-mensajePlaylist.innerHTML="";
+mensajePlaylist.innerHTML = "";
+
+mensajePlaylist.classList.remove("mostrar");
 
 }
 
 
-// borrar estrellas
+/* reset estrellas */
+
 stars.forEach(s=>{
 s.classList.remove('selected');
 });
 
-
 califico = false;
-// limpiar formulario
+
 this.reset();
+
 });
+
 </script>
 </body>
 </html>
