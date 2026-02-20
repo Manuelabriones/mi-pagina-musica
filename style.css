@@ -169,3 +169,16 @@ border-radius: 10px;
     flex: 1;
 
 }
+.btn-play{
+background:#1DB954;
+border:none;
+padding:8px 15px;
+border-radius:20px;
+color:white;
+cursor:pointer;
+margin-top:10px;
+}
+
+.btn-play:hover{
+background:#1ed760;
+}
