@@ -19,5 +19,4 @@ Página publicada:
 https://manuelabriones.github.io/mi-pagina-musica/
 
 ## Autor
-
-Manuela Briones
+Manuela Briones Vela
