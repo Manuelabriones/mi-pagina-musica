@@ -152,12 +152,12 @@ Ver en Spotify
 
 <h2>Mi Playlist favorita</h2>
 
-<p>Califica cada canción y reprodúcela:</p>
+<p>Reproduce y califica cada canción:</p>
 
 <ul class="playlist">
 
 
-<!-- CANCION 1 -->
+<!-- CANCIÓN 1 -->
 <li class="cancion">
 
 <img src="./assets/pink.jpg" alt="Just Give Me a Reason">
@@ -167,11 +167,13 @@ Ver en Spotify
 Pink
 </div>
 
-<button class="btn-play" onclick="reproducir(this,'audio1')">
+<button class="btn-play" onclick="reproducirAudio(this, 'audio1')">
 ▶ Play
 </button>
 
-<audio id="audio1" src="./audio/pink.mp3"></audio>
+<audio id="audio1">
+<source src="./audio/pink.mp3" type="audio/mpeg">
+</audio>
 
 <div class="stars">
 <span class="star" data-value="1">★</span>
@@ -185,7 +187,7 @@ Pink
 
 
 
-<!-- CANCION 2 -->
+<!-- CANCIÓN 2 -->
 <li class="cancion">
 
 <img src="./assets/billie.jpg" alt="BLUE">
@@ -195,11 +197,13 @@ Pink
 Billie Eilish
 </div>
 
-<button class="btn-play" onclick="reproducir(this,'audio2')">
+<button class="btn-play" onclick="reproducirAudio(this, 'audio2')">
 ▶ Play
 </button>
 
-<audio id="audio2" src="./audio/billie.mp3"></audio>
+<audio id="audio2">
+<source src="./audio/billie.mp3" type="audio/mpeg">
+</audio>
 
 <div class="stars">
 <span class="star" data-value="1">★</span>
@@ -213,7 +217,7 @@ Billie Eilish
 
 
 
-<!-- CANCION 3 -->
+<!-- CANCIÓN 3 -->
 <li class="cancion">
 
 <img src="./assets/royce.jpg" alt="La Carretera">
@@ -223,11 +227,13 @@ Billie Eilish
 Prince Royce
 </div>
 
-<button class="btn-play" onclick="reproducir(this,'audio3')">
+<button class="btn-play" onclick="reproducirAudio(this, 'audio3')">
 ▶ Play
 </button>
 
-<audio id="audio3" src="./audio/royce.mp3"></audio>
+<audio id="audio3">
+<source src="./audio/royce.mp3" type="audio/mpeg">
+</audio>
 
 <div class="stars">
 <span class="star" data-value="1">★</span>
@@ -285,15 +291,14 @@ Prince Royce
 </footer>
 <script>
 
-// guardar audio activo
 let audioActual = null;
 let botonActual = null;
 
-function reproducir(boton, id){
+function reproducirAudio(boton, audioId){
 
-    const audio = document.getElementById(id);
+    const audio = document.getElementById(audioId);
 
-    // si hay otro audio y es diferente → pausarlo
+    // pausar audio anterior
     if(audioActual && audioActual !== audio){
 
         audioActual.pause();
@@ -308,28 +313,29 @@ function reproducir(boton, id){
     // reproducir o pausar
     if(audio.paused){
 
-        audio.play().then(()=>{
+        audio.play();
 
-            boton.innerHTML = "⏸ Pause";
-            audioActual = audio;
-            botonActual = boton;
+        boton.innerHTML = "⏸ Pause";
 
-        }).catch(error=>{
-            console.log("Error reproduciendo:", error);
-        });
+        audioActual = audio;
+        botonActual = boton;
 
     }
     else{
 
         audio.pause();
+
         boton.innerHTML = "▶ Play";
+
+        audioActual = null;
+        botonActual = null;
 
     }
 
 }
 
 
-// cuando termina una canción → resetear botón
+// resetear botón cuando termina
 document.querySelectorAll("audio").forEach(audio=>{
 
     audio.addEventListener("ended",()=>{
@@ -340,33 +346,6 @@ document.querySelectorAll("audio").forEach(audio=>{
 
         audioActual = null;
         botonActual = null;
-
-    });
-
-});
-
-
-// ESTRELLAS
-const stars = document.querySelectorAll('.star');
-
-stars.forEach(star=>{
-
-    star.addEventListener('click',()=>{
-
-        let value = star.getAttribute('data-value');
-
-        let container = star.parentElement;
-
-        let allStars = container.querySelectorAll('.star');
-
-        allStars.forEach(s=>{
-
-            s.classList.toggle(
-                'selected',
-                s.getAttribute('data-value') <= value
-            );
-
-        });
 
     });
 
