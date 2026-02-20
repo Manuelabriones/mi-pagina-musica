@@ -132,3 +132,40 @@ display: block;
 margin: 10px auto;
 border-radius: 10px;
 }
+.playlist {
+    list-style: none;
+    padding: 0;
+}
+
+.cancion {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #181818;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+.cancion:hover {
+
+    background-color: #282828;
+
+}
+
+.cancion img {
+
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+
+}
+
+.info {
+
+    flex: 1;
+
+}
