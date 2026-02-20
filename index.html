@@ -285,43 +285,65 @@ Prince Royce
 </footer>
 <script>
 
-// AUDIO PLAYER
+// guardar audio activo
 let audioActual = null;
 let botonActual = null;
 
-function reproducir(boton,id){
+function reproducir(boton, id){
 
-const audio = document.getElementById(id);
+    const audio = document.getElementById(id);
 
-// si hay otro audio reproduciendo → pausarlo
-if(audioActual && audioActual !== audio){
+    // si hay otro audio y es diferente → pausarlo
+    if(audioActual && audioActual !== audio){
 
-audioActual.pause();
+        audioActual.pause();
+        audioActual.currentTime = 0;
 
-if(botonActual){
-botonActual.innerHTML = "▶ Play";
+        if(botonActual){
+            botonActual.innerHTML = "▶ Play";
+        }
+
+    }
+
+    // reproducir o pausar
+    if(audio.paused){
+
+        audio.play().then(()=>{
+
+            boton.innerHTML = "⏸ Pause";
+            audioActual = audio;
+            botonActual = boton;
+
+        }).catch(error=>{
+            console.log("Error reproduciendo:", error);
+        });
+
+    }
+    else{
+
+        audio.pause();
+        boton.innerHTML = "▶ Play";
+
+    }
+
 }
 
-}
 
-// reproducir o pausar
-if(audio.paused){
+// cuando termina una canción → resetear botón
+document.querySelectorAll("audio").forEach(audio=>{
 
-audio.play();
-boton.innerHTML = "⏸ Pause";
+    audio.addEventListener("ended",()=>{
 
-audioActual = audio;
-botonActual = boton;
+        if(botonActual){
+            botonActual.innerHTML = "▶ Play";
+        }
 
-}else{
+        audioActual = null;
+        botonActual = null;
 
-audio.pause();
-boton.innerHTML = "▶ Play";
+    });
 
-}
-
-}
-
+});
 
 
 // ESTRELLAS
@@ -329,24 +351,24 @@ const stars = document.querySelectorAll('.star');
 
 stars.forEach(star=>{
 
-star.addEventListener('click',()=>{
+    star.addEventListener('click',()=>{
 
-let value = star.getAttribute('data-value');
+        let value = star.getAttribute('data-value');
 
-let container = star.parentElement;
+        let container = star.parentElement;
 
-let allStars = container.querySelectorAll('.star');
+        let allStars = container.querySelectorAll('.star');
 
-allStars.forEach(s=>{
+        allStars.forEach(s=>{
 
-s.classList.toggle(
-'selected',
-s.getAttribute('data-value') <= value
-);
+            s.classList.toggle(
+                'selected',
+                s.getAttribute('data-value') <= value
+            );
 
-});
+        });
 
-});
+    });
 
 });
 
