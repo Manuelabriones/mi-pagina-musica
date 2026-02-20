@@ -99,39 +99,20 @@ footer {
     transform: scale(1.2);
 
 }
-/* MENSAJE PLAYLIST ESTILO SPOTIFY */
+.mensaje-playlist{
 
-.mensaje-playlist {
-
-    margin-top: 15px;
-    
-    padding: 12px;
-    
-    background-color: #1db954;
-    
-    color: white;
-    
-    font-weight: 600;
-    
-    border-radius: 8px;
-    
-    display: inline-block;
-    
-    opacity: 0;
-    
-    transform: translateY(10px);
-    
-    transition: all 0.4s ease;
+background:#1db954;
+color:white;
+padding:10px;
+border-radius:8px;
+margin-top:10px;
+opacity:0;
+transition:0.4s;
 
 }
 
+.mensaje-playlist.mostrar{
 
-/* cuando aparece */
-
-.mensaje-playlist.mostrar {
-
-    opacity: 1;
-    
-    transform: translateY(0);
+opacity:1;
 
 }
