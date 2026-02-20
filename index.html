@@ -273,7 +273,7 @@ Prince Royce
 
 </form>
 
-<p id="mensaje"></p>
+<p id="mensaje" class="mensaje-formulario"></p>
 
 </section>
 
@@ -300,7 +300,6 @@ function reproducirAudio(boton, audioId){
 
     const audio = document.getElementById(audioId);
 
-    // pausar audio anterior
     if(audioActual && audioActual !== audio){
 
         audioActual.pause();
@@ -312,7 +311,6 @@ function reproducirAudio(boton, audioId){
 
     }
 
-    // reproducir o pausar
     if(audio.paused){
 
         audio.play();
@@ -337,21 +335,24 @@ function reproducirAudio(boton, audioId){
 }
 
 
-// resetear botón cuando termina canción
-document.querySelectorAll("audio").forEach(audio=>{
+// ================= MENSAJE PLAYLIST =================
 
-    audio.addEventListener("ended",()=>{
+function mostrarMensajePlaylist(){
 
-        if(botonActual){
-            botonActual.innerHTML = "▶ Play";
-        }
+    const mensaje = document.getElementById("mensaje-playlist");
 
-        audioActual = null;
-        botonActual = null;
+    mensaje.innerHTML = "Gracias por calificar mi playlist";
 
-    });
+    mensaje.classList.add("mostrar");
 
-});
+    // desaparecer después de 3 segundos
+    setTimeout(()=>{
+
+        mensaje.classList.remove("mostrar");
+
+    },3000);
+
+}
 
 
 // ================= ESTRELLAS =================
@@ -382,7 +383,39 @@ stars.forEach(star=>{
 
         });
 
+        // mostrar mensaje con animación
+        mostrarMensajePlaylist();
+
     });
+
+});
+
+</script>
+<script>
+
+// FORMULARIO CON ANIMACIÓN
+document.getElementById("form-musica").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const cancion = document.getElementById("cancion").value;
+
+    const mensaje = document.getElementById("mensaje");
+
+    mensaje.innerHTML =
+    "🎵 Gracias " + nombre + " por recomendar: <strong>" + cancion + "</strong>";
+
+    mensaje.classList.add("mostrar");
+
+    // desaparecer después de 4 segundos
+    setTimeout(()=>{
+
+        mensaje.classList.remove("mostrar");
+
+    },4000);
+
+    this.reset();
 
 });
 
