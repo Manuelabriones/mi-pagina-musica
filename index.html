@@ -300,6 +300,7 @@ function reproducirAudio(boton, audioId){
 
     const audio = document.getElementById(audioId);
 
+    // detener el audio anterior
     if(audioActual && audioActual !== audio){
 
         audioActual.pause();
@@ -311,20 +312,18 @@ function reproducirAudio(boton, audioId){
 
     }
 
+    // reproducir o pausar
     if(audio.paused){
 
         audio.play();
-
         boton.innerHTML = "⏸ Pause";
 
         audioActual = audio;
         botonActual = boton;
 
-    }
-    else{
+    }else{
 
         audio.pause();
-
         boton.innerHTML = "▶ Play";
 
         audioActual = null;
@@ -369,6 +368,7 @@ stars.forEach(star=>{
 
         const estrellas = contenedor.querySelectorAll('.star');
 
+        // pintar estrellas
         estrellas.forEach(s=>{
 
             if(s.getAttribute('data-value') <= valor){
@@ -383,17 +383,25 @@ stars.forEach(star=>{
 
         });
 
-        // mostrar mensaje con animación
+        // mostrar mensaje animado
         mostrarMensajePlaylist();
+
+        // limpiar estrellas después de 2 segundos
+        setTimeout(()=>{
+
+            estrellas.forEach(s=>{
+                s.classList.remove('selected');
+            });
+
+        },2000);
 
     });
 
 });
 
-</script>
-<script>
 
-// FORMULARIO CON ANIMACIÓN
+// ================= FORMULARIO =================
+
 document.getElementById("form-musica").addEventListener("submit", function(e){
 
     e.preventDefault();
@@ -404,7 +412,7 @@ document.getElementById("form-musica").addEventListener("submit", function(e){
     const mensaje = document.getElementById("mensaje");
 
     mensaje.innerHTML =
-    "🎵 Gracias " + nombre + " por recomendar: <strong>" + cancion + "</strong>";
+    "Gracias " + nombre + " por recomendar: <strong>" + cancion + "</strong>";
 
     mensaje.classList.add("mostrar");
 
