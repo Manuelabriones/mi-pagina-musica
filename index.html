@@ -291,6 +291,8 @@ Prince Royce
 </footer>
 <script>
 
+// ================= AUDIO =================
+
 let audioActual = null;
 let botonActual = null;
 
@@ -335,7 +337,7 @@ function reproducirAudio(boton, audioId){
 }
 
 
-// resetear botón cuando termina
+// resetear botón cuando termina canción
 document.querySelectorAll("audio").forEach(audio=>{
 
     audio.addEventListener("ended",()=>{
@@ -346,6 +348,39 @@ document.querySelectorAll("audio").forEach(audio=>{
 
         audioActual = null;
         botonActual = null;
+
+    });
+
+});
+
+
+// ================= ESTRELLAS =================
+
+const stars = document.querySelectorAll('.star');
+
+stars.forEach(star=>{
+
+    star.addEventListener('click', function(){
+
+        const valor = this.getAttribute('data-value');
+
+        const contenedor = this.parentElement;
+
+        const estrellas = contenedor.querySelectorAll('.star');
+
+        estrellas.forEach(s=>{
+
+            if(s.getAttribute('data-value') <= valor){
+
+                s.classList.add('selected');
+
+            }else{
+
+                s.classList.remove('selected');
+
+            }
+
+        });
 
     });
 
