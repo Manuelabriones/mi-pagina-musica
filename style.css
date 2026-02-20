@@ -117,8 +117,7 @@ opacity:1;
 
 }
 iframe {
-
-border-radius: 10px;
-margin-top: 10px;
-
+display: block;
+margin: 15px auto;
+border-radius: 12px;
 }
