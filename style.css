@@ -208,3 +208,104 @@ opacity: 1;
 transform: translateY(0) scale(1);
 
 }
+/* TARJETAS DE CANCIONES */
+
+.playlist{
+list-style:none;
+padding:0;
+}
+
+.cancion{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+background:#181818;
+
+padding:15px;
+
+margin:15px 0;
+
+border-radius:10px;
+
+transition:0.3s;
+
+}
+
+.cancion:hover{
+
+background:#282828;
+
+transform:scale(1.03);
+
+box-shadow:0 0 15px rgba(29,185,84,0.3);
+
+}
+/* TARJETAS DE CANCIONES */
+
+.playlist{
+list-style:none;
+padding:0;
+}
+
+.cancion{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+background:#181818;
+
+padding:15px;
+
+margin:15px 0;
+
+border-radius:10px;
+
+transition:0.3s;
+
+}
+
+.cancion:hover{
+
+background:#282828;
+
+transform:scale(1.03);
+
+box-shadow:0 0 15px rgba(29,185,84,0.3);
+
+}
+.cancion img{
+
+width:70px;
+height:70px;
+
+border-radius:8px;
+
+object-fit:cover;
+
+}
+.btn-play{
+
+background:#1DB954;
+
+border:none;
+
+padding:8px 15px;
+
+border-radius:20px;
+
+color:white;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+.btn-play:hover{
+
+background:#1ed760;
+
+}   
