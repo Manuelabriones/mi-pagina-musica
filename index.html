@@ -74,7 +74,6 @@ y su estilo único. Sus canciones conectan con emociones profundas y son muy pop
 Aquí puedes ver uno de sus videos:
 </p>
 
-<!-- VIDEO MORAT -->
 <iframe 
 width="300" 
 height="170" 
@@ -91,6 +90,8 @@ Ver en Spotify
 </a>
 
 </article>
+
+
 <article>
 
 <h3>Reik</h3>
@@ -101,7 +102,6 @@ y emotivas. Su música combina pop y baladas que han marcado a muchas generacion
 Aquí puedes ver uno de sus videos musicales más representativos:
 </p>
 
-<!-- VIDEO REIK -->
 <iframe 
 width="300" 
 height="170" 
@@ -113,7 +113,7 @@ allowfullscreen>
 
 <br><br>
 
-<a href="https://open.spotify.com/intl-es/artist/0vR2qb8m9WHeZ5ByCbimq2?si=2YpzIiblSFigFQBbmX5HQg" target="_blank">
+<a href="https://open.spotify.com/intl-es/artist/0vR2qb8m9WHeZ5ByCbimq2" target="_blank">
 Ver en Spotify
 </a>
 
@@ -128,6 +128,7 @@ Ver en Spotify
 Dúo mexicano reconocido por sus canciones emotivas y su gran talento vocal.
 Aquí puedes ver uno de sus videos musicales:
 </p>
+
 <iframe 
 width="300" 
 height="170" 
@@ -147,6 +148,8 @@ Ver en Spotify
 
 </section>
 
+
+
 <!-- PLAYLIST -->
 <section id="playlist">
 
@@ -157,7 +160,6 @@ Ver en Spotify
 <ul class="playlist">
 
 
-<!-- CANCIÓN 1 -->
 <li class="cancion">
 
 <img src="./assets/pink.jpg" alt="Just Give Me a Reason">
@@ -187,7 +189,6 @@ Pink
 
 
 
-<!-- CANCIÓN 2 -->
 <li class="cancion">
 
 <img src="./assets/billie.jpg" alt="BLUE">
@@ -217,7 +218,6 @@ Billie Eilish
 
 
 
-<!-- CANCIÓN 3 -->
 <li class="cancion">
 
 <img src="./assets/royce.jpg" alt="La Carretera">
@@ -252,6 +252,8 @@ Prince Royce
 
 </section>
 
+
+
 <!-- FORMULARIO -->
 <section id="formulario">
 
@@ -260,14 +262,10 @@ Prince Royce
 <form id="form-musica">
 
 <label for="nombre">Nombre:</label>
-
 <input type="text" id="nombre" required>
 
-
 <label for="cancion">Canción recomendada:</label>
-
 <input type="text" id="cancion" required>
-
 
 <button type="submit">Enviar</button>
 
@@ -283,150 +281,15 @@ Prince Royce
 
 
 
-
 <footer>
 
 <p>Proyecto creado por Manuela Briones | DEV.F 2026</p>
 
 </footer>
-<script>
-
-// ================= AUDIO =================
-
-let audioActual = null;
-let botonActual = null;
-
-function reproducirAudio(boton, audioId){
-
-    const audio = document.getElementById(audioId);
-
-    // detener el audio anterior
-    if(audioActual && audioActual !== audio){
-
-        audioActual.pause();
-        audioActual.currentTime = 0;
-
-        if(botonActual){
-            botonActual.innerHTML = "▶ Play";
-        }
-
-    }
-
-    // reproducir o pausar
-    if(audio.paused){
-
-        audio.play();
-        boton.innerHTML = "⏸ Pause";
-
-        audioActual = audio;
-        botonActual = boton;
-
-    }else{
-
-        audio.pause();
-        boton.innerHTML = "▶ Play";
-
-        audioActual = null;
-        botonActual = null;
-
-    }
-
-}
 
 
-// ================= MENSAJE PLAYLIST =================
+<!-- SCRIPT EXTERNO -->
+<script src="script.js"></script>
 
-function mostrarMensajePlaylist(){
-
-    const mensaje = document.getElementById("mensaje-playlist");
-
-    mensaje.innerHTML = "Gracias por calificar mi playlist";
-
-    mensaje.classList.add("mostrar");
-
-    // desaparecer después de 3 segundos
-    setTimeout(()=>{
-
-        mensaje.classList.remove("mostrar");
-
-    },3000);
-
-}
-
-
-// ================= ESTRELLAS =================
-
-const stars = document.querySelectorAll('.star');
-
-stars.forEach(star=>{
-
-    star.addEventListener('click', function(){
-
-        const valor = this.getAttribute('data-value');
-
-        const contenedor = this.parentElement;
-
-        const estrellas = contenedor.querySelectorAll('.star');
-
-        // pintar estrellas
-        estrellas.forEach(s=>{
-
-            if(s.getAttribute('data-value') <= valor){
-
-                s.classList.add('selected');
-
-            }else{
-
-                s.classList.remove('selected');
-
-            }
-
-        });
-
-        // mostrar mensaje animado
-        mostrarMensajePlaylist();
-
-        // limpiar estrellas después de 2 segundos
-        setTimeout(()=>{
-
-            estrellas.forEach(s=>{
-                s.classList.remove('selected');
-            });
-
-        },2000);
-
-    });
-
-});
-
-
-// ================= FORMULARIO =================
-
-document.getElementById("form-musica").addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    const nombre = document.getElementById("nombre").value;
-    const cancion = document.getElementById("cancion").value;
-
-    const mensaje = document.getElementById("mensaje");
-
-    mensaje.innerHTML =
-    "Gracias " + nombre + " por recomendar: <strong>" + cancion + "</strong>";
-
-    mensaje.classList.add("mostrar");
-
-    // desaparecer después de 4 segundos
-    setTimeout(()=>{
-
-        mensaje.classList.remove("mostrar");
-
-    },4000);
-
-    this.reset();
-
-});
-
-</script>
 </body>
 </html>
