@@ -55,31 +55,29 @@ main {
     padding: 30px;
 }
 
-/* ARTISTAS */
+/* ARTISTAS (CONTENEDOR FLEX CORRECTO) */
 .contenedor-artistas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* TARJETAS IGUALES */
+/* TARJETAS */
 #artistas article {
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-/* TARJETAS */
-article {
     background-color: #181818;
     padding: 20px;
     border-radius: 10px;
     transition: 0.3s;
 }
 
-article:hover {
+#artistas article:hover {
     background-color: #282828;
 }
 
