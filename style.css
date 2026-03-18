@@ -55,8 +55,8 @@ main {
     padding: 30px;
 }
 
-/* ARTISTAS FLEX */
-#artistas {
+/* ARTISTAS */
+.contenedor-artistas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
