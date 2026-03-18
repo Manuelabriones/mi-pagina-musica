@@ -4,25 +4,27 @@ body {
     color: white;
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
-    scroll-behavior: smooth; /* Para que al dar clic en el nav baje suavemente */
+    scroll-behavior: smooth; /* Desplazamiento suave */
 }
 
+/* HERENCIA */
 section {
     color: #e0e0e0;
-    padding: 40px 0;
 }
 
+/* TITULOS */
 h1, h2 {
     text-align: center;
 }
 
+/* TEXTO BIENVENIDA */
 #inicio p {
     max-width: 800px;
     margin: auto;
     text-align: center;
 }
 
-/* --- HEADER (Con Position Sticky y Flexbox) --- */
+/* HEADER (Sticky y Flexbox) */
 header {
     background-color: black;
     padding: 20px;
@@ -31,7 +33,7 @@ header {
     align-items: center; 
     flex-wrap: wrap;
     
-    /* NUEVO: Mantiene el menú arriba al bajar con el mouse */
+    /* Mantiene el menú arriba al bajar */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -41,10 +43,9 @@ header {
 header h1 {
     color: #1DB954;
     margin: 0;
-    font-size: 1.5rem;
 }
 
-/* --- NAVEGACIÓN --- */
+/* NAV FLEX */
 nav {
     display: flex;
     gap: 20px;
@@ -54,21 +55,20 @@ nav a {
     color: inherit;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 nav a:hover {
     color: #1DB954;
 }
 
-/* --- CONTENEDOR PRINCIPAL --- */
+/* MAIN */
 main {
     padding: 30px;
     max-width: 1200px;
     margin: auto;
 }
 
-/* --- ARTISTAS (Grid de tarjetas) --- */
+/* ARTISTAS */
 .contenedor-artistas {
     display: flex;
     flex-wrap: wrap;
@@ -76,6 +76,7 @@ main {
     gap: 20px;
 }
 
+/* TARJETAS */
 #artistas article {
     width: 300px;
     display: flex;
@@ -85,25 +86,24 @@ main {
     padding: 20px;
     border-radius: 10px;
     transition: 0.3s;
-    
-    /* NUEVO: Necesario para posicionar elementos dentro (como un badge si quisieras) */
-    position: relative; 
+    position: relative; /* Para posicionamiento absoluto interno */
 }
 
 #artistas article:hover {
     background-color: #282828;
-    transform: translateY(-5px); /* Pequeña animación al pasar el mouse */
+    transform: translateY(-5px);
 }
 
 article h3 {
     color: #1DB954;
 }
 
+/* TEXTO IGUAL ALTURA */
 #artistas p {
-    min-height: 100px; /* Ajustado para que no sea tan alto */
+    min-height: 100px;
 }
 
-/* --- VIDEOS --- */
+/* VIDEO */
 iframe {
     width: 100%;
     height: 170px;
@@ -112,17 +112,41 @@ iframe {
     border: none;
 }
 
-/* --- IMAGEN CENTRAL --- */
+/* BOTONES GENERALES */
+button {
+    background-color: #1DB954;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1ed760;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* IMAGEN CENTRAL */
 .imagen-centro {
     display: block;
     margin: 40px auto;
-    width: 90%; /* Responsivo */
+    width: 90%;
     max-width: 400px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(30, 215, 96, 0.4);
 }
 
-/* --- PLAYLIST (Alineación Horizontal) --- */
+/* PLAYLIST FLEX */
 .playlist {
     list-style: none;
     padding: 0;
@@ -131,9 +155,10 @@ iframe {
     gap: 15px;
 }
 
+/* CANCIONES */
 .cancion {
     display: flex;
-    align-items: center; /* Centrado vertical interno */
+    align-items: center;
     gap: 15px;
     background: #181818;
     padding: 15px;
@@ -143,93 +168,96 @@ iframe {
 
 .cancion:hover {
     background: #282828;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(29,185,84,0.3);
 }
 
 .cancion img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 8px;
     object-fit: cover;
 }
 
 .info {
-    flex: 1; /* NUEVO: Ocupa todo el espacio sobrante */
+    flex: 1; /* Ocupa el espacio disponible */
 }
 
-/* --- FORMULARIO (Alineación Flex) --- */
+/* ESTRELLAS (Originales) */
+.stars {
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.star {
+    color: gray;
+    transition: 0.2s;
+}
+
+.star.selected {
+    color: #1DB954;
+}
+
+/* MENSAJES DE FEEDBACK */
+.mensaje-playlist, .mensaje-formulario {
+    background: #1DB954;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    opacity: 0;
+    transition: 0.4s;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mensaje-playlist.mostrar, .mensaje-formulario.mostrar {
+    opacity: 1;
+}
+
+/* FORMULARIO FLEX */
 #formulario form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
     background: #181818;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
 }
 
 input {
-    padding: 10px;
+    padding: 8px;
     border-radius: 6px;
     border: none;
     background: #333;
     color: white;
 }
 
-button {
-    background-color: #1DB954;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #1ed760;
-    transform: scale(1.05);
-}
-
-/* --- FOOTER --- */
-footer {
-    background-color: black;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
 /* ==========================================
-   MEDIA QUERIES (Diseño Responsivo)
+   MEDIA QUERIES (RESPONSIVO)
    ========================================== */
-
-/* Tabletas y Celulares grandes */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Apila Título y Nav */
-        gap: 10px;
+        flex-direction: column;
+        text-align: center;
     }
-
+    
     nav {
-        gap: 10px;
-        font-size: 0.9rem;
+        margin-top: 15px;
     }
 }
 
-/* Celulares pequeños */
 @media (max-width: 480px) {
     .cancion {
-        flex-direction: column; /* La playlist se vuelve vertical */
+        flex-direction: column;
         text-align: center;
     }
-
-    .info {
-        margin-bottom: 10px;
-    }
-
+    
     #formulario form {
-        flex-direction: column; /* Formulario en columna */
+        flex-direction: column;
         align-items: stretch;
     }
 }
