@@ -10,7 +10,7 @@ section {
     color: #e0e0e0;
 }
 
-/* TITULOS CENTRADOS */
+/* TITULOS */
 h1, h2 {
     text-align: center;
 }
@@ -33,11 +33,16 @@ header h1 {
     color: #1DB954;
 }
 
-/* NAV */
+/* NAV FLEX */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 nav a {
     color: inherit;
     text-decoration: none;
-    margin: 15px;
     font-weight: bold;
 }
 
@@ -50,12 +55,23 @@ main {
     padding: 30px;
 }
 
-/* ARTISTAS */
+/* ARTISTAS FLEX */
+#artistas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#artistas article {
+    width: 300px;
+}
+
+/* TARJETAS */
 article {
     background-color: #181818;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
 }
 
 article:hover {
@@ -102,6 +118,58 @@ iframe {
     display: block;
     margin: 10px auto;
     border-radius: 10px;
+}
+
+/* PLAYLIST FLEX */
+.playlist {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* CANCIONES */
+.cancion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #181818;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.cancion:hover {
+    background: #282828;
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(29,185,84,0.3);
+}
+
+.cancion img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+}
+
+/* BOTON PLAY */
+.btn-play {
+    background:#1DB954;
+    border:none;
+    padding:8px 15px;
+    border-radius:20px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-play:hover {
+    background:#1ed760;
 }
 
 /* ESTRELLAS */
@@ -158,56 +226,7 @@ iframe {
     transform: translateY(0) scale(1);
 }
 
-/* PLAYLIST */
-.playlist {
-    list-style: none;
-    padding: 0;
-}
-
-.cancion {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: #181818;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.cancion:hover {
-    background: #282828;
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(29,185,84,0.3);
-}
-
-.cancion img {
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.info {
-    flex: 1;
-}
-
-/* BOTON PLAY */
-.btn-play {
-    background:#1DB954;
-    border:none;
-    padding:8px 15px;
-    border-radius:20px;
-    color:white;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.btn-play:hover {
-    background:#1ed760;
-}
-
-/* FORMULARIO */
+/* FORMULARIO FLEX */
 #formulario form {
     display: flex;
     justify-content: center;
