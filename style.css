@@ -4,7 +4,8 @@ body {
     color: white;
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
-    scroll-behavior: smooth; /* Desplazamiento suave */
+    scroll-behavior: smooth;
+    /* Desplazamiento suave */
 }
 
 /* HERENCIA */
@@ -13,7 +14,8 @@ section {
 }
 
 /* TITULOS */
-h1, h2 {
+h1,
+h2 {
     text-align: center;
 }
 
@@ -29,15 +31,15 @@ header {
     background-color: black;
     padding: 20px;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    
+
     /* Mantiene el menú arriba al bajar */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
@@ -86,7 +88,8 @@ main {
     padding: 20px;
     border-radius: 10px;
     transition: 0.3s;
-    position: relative; /* Para posicionamiento absoluto interno */
+    position: relative;
+    /* Para posicionamiento absoluto interno */
 }
 
 #artistas article:hover {
@@ -169,7 +172,7 @@ footer {
 .cancion:hover {
     background: #282828;
     transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(29,185,84,0.3);
+    box-shadow: 0 0 15px rgba(29, 185, 84, 0.3);
 }
 
 .cancion img {
@@ -180,7 +183,8 @@ footer {
 }
 
 .info {
-    flex: 1; /* Ocupa el espacio disponible */
+    flex: 1;
+    /* Ocupa el espacio disponible */
 }
 
 /* ESTRELLAS (Originales) */
@@ -200,7 +204,8 @@ footer {
 }
 
 /* MENSAJES DE FEEDBACK */
-.mensaje-playlist, .mensaje-formulario {
+.mensaje-playlist,
+.mensaje-formulario {
     background: #1DB954;
     color: white;
     padding: 10px;
@@ -212,7 +217,8 @@ footer {
     font-weight: bold;
 }
 
-.mensaje-playlist.mostrar, .mensaje-formulario.mostrar {
+.mensaje-playlist.mostrar,
+.mensaje-formulario.mostrar {
     opacity: 1;
 }
 
@@ -244,7 +250,7 @@ input {
         flex-direction: column;
         text-align: center;
     }
-    
+
     nav {
         margin-top: 15px;
     }
@@ -255,9 +261,22 @@ input {
         flex-direction: column;
         text-align: center;
     }
-    
+
     #formulario form {
         flex-direction: column;
         align-items: stretch;
     }
+}
+
+.cookies {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    background: #1DB954;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+    z-index: 1000;
 }
