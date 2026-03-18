@@ -3,6 +3,11 @@
 let audioActual = null;
 let botonActual = null;
 
+function aceptarCookies() {
+    const banner = document.getElementById("cookies");
+    banner.style.display = "none";
+}
+
 function reproducirAudio(boton, audioId){
 
     const audio = document.getElementById(audioId);
@@ -111,5 +116,6 @@ document.getElementById("form-musica").addEventListener("submit", function(e){
     },4000);
 
     this.reset();
+    
 
 });
