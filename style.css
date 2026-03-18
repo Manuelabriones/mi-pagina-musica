@@ -57,6 +57,8 @@ nav a:hover {
 /* MAIN */
 main {
     padding: 30px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* ARTISTAS  */
