@@ -26,17 +26,21 @@ h1, h2 {
 header {
     background-color: black;
     padding: 20px;
-    text-align: center;
+
+    display: flex;
+    justify-content: space-between; /* separa */
+    align-items: center; /* centra vertical */
+    flex-wrap: wrap;
 }
 
 header h1 {
     color: #1DB954;
+    margin: 0;
 }
 
 /* NAV FLEX */
 nav {
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
@@ -55,7 +59,7 @@ main {
     padding: 30px;
 }
 
-/* ARTISTAS (CONTENEDOR FLEX CORRECTO) */
+/* ARTISTAS  */
 .contenedor-artistas {
     display: flex;
     flex-wrap: wrap;
