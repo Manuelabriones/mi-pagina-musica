@@ -118,33 +118,104 @@
         <section id="playlist">
 
             <h2>Mi Playlist favorita</h2>
+
             <p>Reproduce y califica cada canción:</p>
 
             <ul class="playlist">
 
+
                 <li class="cancion">
+
                     <img src="./assets/pink.jpg" alt="Just Give Me a Reason">
+
                     <div class="info">
-                        <strong>Just Give Me a Reason</strong><br>Pink
+                        <strong>Just Give Me a Reason</strong><br>
+                        Pink
                     </div>
-                    <button class="btn-play" onclick="reproducirAudio(this, 'audio1')">▶ Play</button>
+
+                    <button class="btn-play" onclick="reproducirAudio(this, 'audio1')">
+                        ▶ Play
+                    </button>
+
                     <audio id="audio1">
                         <source src="./audio/pink.mp3" type="audio/mpeg">
                     </audio>
+
                     <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
                     </div>
+
                 </li>
+
+
+
+                <li class="cancion">
+
+                    <img src="./assets/billie.jpg" alt="BLUE">
+
+                    <div class="info">
+                        <strong>BLUE</strong><br>
+                        Billie Eilish
+                    </div>
+
+                    <button class="btn-play" onclick="reproducirAudio(this, 'audio2')">
+                        ▶ Play
+                    </button>
+
+                    <audio id="audio2">
+                        <source src="./audio/billie.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <div class="stars">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+
+                </li>
+
+
+
+                <li class="cancion">
+
+                    <img src="./assets/royce.jpg" alt="La Carretera">
+
+                    <div class="info">
+                        <strong>La Carretera</strong><br>
+                        Prince Royce
+                    </div>
+
+                    <button class="btn-play" onclick="reproducirAudio(this, 'audio3')">
+                        ▶ Play
+                    </button>
+
+                    <audio id="audio3">
+                        <source src="./audio/royce.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <div class="stars">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+
+                </li>
+
 
             </ul>
 
             <p id="mensaje-playlist" class="mensaje-playlist"></p>
 
         </section>
+
 
         <!-- FORMULARIO -->
         <section id="formulario">
@@ -187,10 +258,6 @@
 
                     <a href="https://www.facebook.com/manu.brionesvela.9" target="_blank">
                         <i class="fab fa-facebook"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fab fa-youtube"></i>
                     </a>
                 </div>
 
