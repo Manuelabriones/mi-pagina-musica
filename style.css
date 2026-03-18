@@ -1,8 +1,17 @@
 body {
     background-color: #121212;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
+}
+
+/* HERENCIA */
+main {
+    text-align: center;
+}
+
+section {
+    color: #e0e0e0;
 }
 
 /* HEADER */
@@ -18,7 +27,7 @@ header h1 {
 
 /* NAV */
 nav a {
-    color: white;
+    color: inherit; /* 👈 hereda del body */
     text-decoration: none;
     margin: 15px;
     font-weight: bold;
@@ -33,7 +42,7 @@ main {
     padding: 30px;
 }
 
-/* CARDS */
+/* ARTISTAS */
 article {
     background-color: #181818;
     padding: 20px;
@@ -45,7 +54,11 @@ article:hover {
     background-color: #282828;
 }
 
-/* BUTTON */
+article h3 {
+    color: #1DB954;
+}
+
+/* BOTONES */
 button {
     background-color: #1DB954;
     border: none;
@@ -64,8 +77,10 @@ footer {
     background-color: black;
     text-align: center;
     padding: 15px;
-    color: gray;
+    color: initial; /* 👈 rompe herencia */
 }
+
+/* IMAGEN */
 .imagen-centro {
     display: block;
     margin: 40px auto;
@@ -73,239 +88,113 @@ footer {
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(30, 215, 96, 0.4);
 }
-.stars {
 
+/* VIDEO */
+iframe {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+/* ESTRELLAS */
+.stars {
     font-size: 30px;
     cursor: pointer;
     margin-top: 5px;
-
 }
 
 .star {
-
     color: gray;
     transition: 0.2s;
-
 }
 
 .star.selected {
-
     color: #1DB954;
-
 }
 
 .star:hover {
-
     transform: scale(1.2);
-
-}
-.mensaje-playlist{
-
-background:#1db954;
-color:white;
-padding:10px;
-border-radius:8px;
-margin-top:10px;
-opacity:0;
-transition:0.4s;
-
 }
 
-.mensaje-playlist.mostrar{
-
-opacity:1;
-
-}
-article {
-background-color: #181818;
-padding: 15px;
-margin: 15px 0;
-border-radius: 12px;
-}
-
-article h3 {
-color: #1DB954;
+/* MENSAJE PLAYLIST */
+.mensaje-playlist {
+    background:#1db954;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    margin-top:10px;
+    opacity:0;
+    transition:0.4s;
 }
 
-iframe {
-display: block;
-margin: 10px auto;
-border-radius: 10px;
+.mensaje-playlist.mostrar {
+    opacity:1;
 }
+
+/* MENSAJE FORMULARIO */
+.mensaje-formulario {
+    background: #1DB954;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(30,215,96,0.5);
+    font-weight: bold;
+}
+
+.mensaje-formulario.mostrar {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* PLAYLIST */
 .playlist {
     list-style: none;
     padding: 0;
 }
 
 .cancion {
-
     display: flex;
     align-items: center;
     gap: 15px;
-
-    background-color: #181818;
-    padding: 10px;
+    background: #181818;
+    padding: 15px;
+    margin: 15px 0;
     border-radius: 10px;
-    margin-bottom: 10px;
-
+    transition: 0.3s;
 }
 
 .cancion:hover {
-
-    background-color: #282828;
-
+    background: #282828;
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(29,185,84,0.3);
 }
 
 .cancion img {
-
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 8px;
-
+    object-fit: cover;
 }
 
 .info {
-
     flex: 1;
-
-}
-.btn-play{
-background:#1DB954;
-border:none;
-padding:8px 15px;
-border-radius:20px;
-color:white;
-cursor:pointer;
-margin-top:10px;
 }
 
-.btn-play:hover{
-background:#1ed760;
-}
-.mensaje-formulario{
-
-background: #1DB954;
-color: white;
-padding: 12px;
-border-radius: 8px;
-margin-top: 15px;
-
-opacity: 0;
-transform: translateY(10px) scale(0.95);
-
-transition: all 0.4s ease;
-
-box-shadow: 0 0 15px rgba(30,215,96,0.5);
-
-font-weight: bold;
-
+/* BOTON PLAY */
+.btn-play {
+    background:#1DB954;
+    border:none;
+    padding:8px 15px;
+    border-radius:20px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-/* cuando aparece */
-.mensaje-formulario.mostrar{
-
-opacity: 1;
-transform: translateY(0) scale(1);
-
+.btn-play:hover {
+    background:#1ed760;
 }
-/* TARJETAS DE CANCIONES */
-
-.playlist{
-list-style:none;
-padding:0;
-}
-
-.cancion{
-
-display:flex;
-align-items:center;
-gap:15px;
-
-background:#181818;
-
-padding:15px;
-
-margin:15px 0;
-
-border-radius:10px;
-
-transition:0.3s;
-
-}
-
-.cancion:hover{
-
-background:#282828;
-
-transform:scale(1.03);
-
-box-shadow:0 0 15px rgba(29,185,84,0.3);
-
-}
-/* TARJETAS DE CANCIONES */
-
-.playlist{
-list-style:none;
-padding:0;
-}
-
-.cancion{
-
-display:flex;
-align-items:center;
-gap:15px;
-
-background:#181818;
-
-padding:15px;
-
-margin:15px 0;
-
-border-radius:10px;
-
-transition:0.3s;
-
-}
-
-.cancion:hover{
-
-background:#282828;
-
-transform:scale(1.03);
-
-box-shadow:0 0 15px rgba(29,185,84,0.3);
-
-}
-.cancion img{
-
-width:70px;
-height:70px;
-
-border-radius:8px;
-
-object-fit:cover;
-
-}
-.btn-play{
-
-background:#1DB954;
-
-border:none;
-
-padding:8px 15px;
-
-border-radius:20px;
-
-color:white;
-
-cursor:pointer;
-
-font-weight:bold;
-
-}
-
-.btn-play:hover{
-
-background:#1ed760;
-
-}   
