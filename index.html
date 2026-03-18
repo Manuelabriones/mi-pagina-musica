@@ -8,40 +8,44 @@
 
     <title>Mi Página de Música</title>
 
+    <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ICONOS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
-<div class="cookies" id="cookies">
-    Este sitio usa cookies 🍪
-    <button onclick="aceptarCookies()">Aceptar</button>
-</div>
-
 <body>
 
+    <!-- COOKIES  -->
+    <div class="cookies" id="cookies">
+        Este sitio usa cookies 🍪
+        <button onclick="aceptarCookies()">Aceptar</button>
+    </div>
 
+    <!-- HEADER -->
     <header>
 
         <h1>Mi Mundo Musical</h1>
 
         <nav>
-
             <a href="#inicio">Inicio</a>
             <a href="#artistas">Artistas</a>
             <a href="#playlist">Playlist</a>
             <a href="#formulario">Recomendar</a>
-
         </nav>
 
     </header>
 
-
-
+    <!-- MAIN -->
     <main>
-
 
         <!-- INICIO -->
         <section id="inicio">
@@ -49,21 +53,16 @@
             <h2>Bienvenido</h2>
 
             <p>
-
                 ¡Hola! Soy Manuela Briones y esta es mi página personal dedicada a mi pasión por la música.
                 La música forma parte de mi vida diaria, me acompaña en diferentes momentos y refleja mi estado de
                 ánimo.
                 Aquí podrás conocer mis artistas favoritos, descubrir canciones que escucho frecuentemente y calificar
-                mi playlist según tu opinión. También puedes recomendarme nuevas canciones usando el formulario.
-                Este proyecto está inspirado en Spotify y fue creado como parte de mi aprendizaje en desarrollo web.
-
+                mi playlist. También puedes recomendarme nuevas canciones usando el formulario.
             </p>
 
             <img src="./assets/foto1.png" alt="Imagen musical de mis cantantes favoritos" class="imagen-centro">
 
         </section>
-
-
 
         <!-- ARTISTAS -->
         <section id="artistas">
@@ -73,175 +72,79 @@
             <div class="contenedor-artistas">
 
                 <article>
-
                     <h3>Morat</h3>
-
                     <p>
-                        Morat es una banda colombiana de pop latino conocida por sus letras románticas
-                        y su estilo único. Sus canciones conectan con emociones profundas y son muy populares.
-                        Aquí puedes ver uno de sus videos:
+                        Banda colombiana de pop latino con letras románticas y estilo único.
                     </p>
 
-                    <iframe src="https://www.youtube.com/embed/-vOgEO13FYA" title="Morat" frameborder="0"
-                        allowfullscreen>
-                    </iframe>
+                    <iframe src="https://www.youtube.com/embed/-vOgEO13FYA" title="Morat"></iframe>
 
                     <a href="https://open.spotify.com/artist/5C4PDR4LnhZTbVnKWXuDKD" target="_blank">
                         Ver en Spotify
                     </a>
-
                 </article>
 
-
                 <article>
-
                     <h3>Reik</h3>
-
                     <p>
-                        Reik es una banda mexicana de pop latino reconocida por sus canciones románticas
-                        y emotivas. Su música combina pop y baladas que han marcado a muchas generaciones.
-                        Aquí puedes ver uno de sus videos musicales más representativos:
+                        Banda mexicana reconocida por sus baladas románticas y emotivas.
                     </p>
 
-                    <iframe src="https://www.youtube.com/embed/B5B5pPVEwyw" title="Reik" frameborder="0"
-                        allowfullscreen>
-                    </iframe>
+                    <iframe src="https://www.youtube.com/embed/B5B5pPVEwyw" title="Reik"></iframe>
 
                     <a href="https://open.spotify.com/intl-es/artist/0vR2qb8m9WHeZ5ByCbimq2" target="_blank">
                         Ver en Spotify
                     </a>
-
                 </article>
 
-
                 <article>
-
                     <h3>Jesse & Joy</h3>
-
                     <p>
-                        Dúo mexicano reconocido por sus canciones emotivas y su gran talento vocal.
-                        Aquí puedes ver uno de sus videos musicales:
+                        Dúo mexicano con gran talento vocal y canciones emotivas.
                     </p>
 
-                    <iframe src="https://www.youtube.com/embed/P2hM9CLAMu4" title="Jesse & Joy" frameborder="0"
-                        allowfullscreen>
-                    </iframe>
+                    <iframe src="https://www.youtube.com/embed/P2hM9CLAMu4" title="Jesse & Joy"></iframe>
 
                     <a href="https://open.spotify.com/artist/1mX1TWKpNxDSAH16LgDfiR" target="_blank">
                         Ver en Spotify
                     </a>
-
                 </article>
 
             </div>
 
         </section>
 
-
-
         <!-- PLAYLIST -->
         <section id="playlist">
 
             <h2>Mi Playlist favorita</h2>
-
             <p>Reproduce y califica cada canción:</p>
 
             <ul class="playlist">
 
-
                 <li class="cancion">
-
                     <img src="./assets/pink.jpg" alt="Just Give Me a Reason">
-
                     <div class="info">
-                        <strong>Just Give Me a Reason</strong><br>
-                        Pink
+                        <strong>Just Give Me a Reason</strong><br>Pink
                     </div>
-
-                    <button class="btn-play" onclick="reproducirAudio(this, 'audio1')">
-                        ▶ Play
-                    </button>
-
+                    <button class="btn-play" onclick="reproducirAudio(this, 'audio1')">▶ Play</button>
                     <audio id="audio1">
                         <source src="./audio/pink.mp3" type="audio/mpeg">
                     </audio>
-
                     <div class="stars">
-                        <span class="star" data-value="1">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="5">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
                     </div>
-
                 </li>
-
-
-
-                <li class="cancion">
-
-                    <img src="./assets/billie.jpg" alt="BLUE">
-
-                    <div class="info">
-                        <strong>BLUE</strong><br>
-                        Billie Eilish
-                    </div>
-
-                    <button class="btn-play" onclick="reproducirAudio(this, 'audio2')">
-                        ▶ Play
-                    </button>
-
-                    <audio id="audio2">
-                        <source src="./audio/billie.mp3" type="audio/mpeg">
-                    </audio>
-
-                    <div class="stars">
-                        <span class="star" data-value="1">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="5">★</span>
-                    </div>
-
-                </li>
-
-
-
-                <li class="cancion">
-
-                    <img src="./assets/royce.jpg" alt="La Carretera">
-
-                    <div class="info">
-                        <strong>La Carretera</strong><br>
-                        Prince Royce
-                    </div>
-
-                    <button class="btn-play" onclick="reproducirAudio(this, 'audio3')">
-                        ▶ Play
-                    </button>
-
-                    <audio id="audio3">
-                        <source src="./audio/royce.mp3" type="audio/mpeg">
-                    </audio>
-
-                    <div class="stars">
-                        <span class="star" data-value="1">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="5">★</span>
-                    </div>
-
-                </li>
-
 
             </ul>
 
             <p id="mensaje-playlist" class="mensaje-playlist"></p>
 
         </section>
-
-
 
         <!-- FORMULARIO -->
         <section id="formulario">
@@ -253,7 +156,7 @@
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" required>
 
-                <label for="cancion">Canción recomendada:</label>
+                <label for="cancion">Canción:</label>
                 <input type="text" id="cancion" required>
 
                 <button type="submit">Enviar</button>
@@ -264,27 +167,39 @@
 
         </section>
 
-
-
     </main>
 
-
-
+    <!-- FOOTER PRO -->
     <footer>
         <div class="footer-container">
+
             <div class="footer-col">
                 <p>Proyecto creado por Manuela Briones | DEV.F 2026</p>
             </div>
+
             <div class="footer-col">
                 <h4>Sígueme</h4>
-                <a href="https://www.instagram.com/manu.briones_v/" target="_blank">Instagram</a>
-                <a href="https://www.facebook.com/manu.brionesvela.9" target="_blank">Facebook</a>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/manu.briones_v/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/manu.brionesvela.9" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+
             </div>
+
         </div>
     </footer>
 
-
-    <!-- SCRIPT EXTERNO -->
+    <!-- SCRIPT -->
     <script src="script.js"></script>
 
 </body>
