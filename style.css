@@ -134,26 +134,25 @@ button:hover {
 /* Contenedor principal del Footer */
 .footer-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que se apilen en móvil */
-    justify-content: space-around; /* Separa las dos columnas */
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #000;
-    border-top: 1px solid #1DB954;
+    border-top: 2px solid #1DB954;
 }
 
-/* Estilos para los bloques de columnas */
-.footer-info, .footer-redes {
-    flex: 1;
-    min-width: 250px; /* Evita que se vean muy apretados */
-    text-align: center;
-    margin: 10px 0;
+.footer-info, .footer-redes { flex: 1; min-width: 300px; text-align: center; }
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    background: #181818;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
-
-.footer-redes h4 {
-    color: #1DB954;
-    margin-bottom: 10px;
-}
+.social-links a:hover { background: #1DB954; }
 
 .social-links a {
     color: white;
@@ -302,15 +301,29 @@ input {
     }
 }
 
+/* COOKIES */
 .cookies {
     position: fixed;
-    bottom: 0;
-    width: 100%;
-
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background: #1DB954;
     color: white;
-    text-align: center;
-    padding: 10px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    width: 80%;
+    max-width: 600px;
+}
 
-    z-index: 1000;
+.cookies button { background: white; color: black; }
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    header { flex-direction: column; gap: 10px; }
+    .footer-container { flex-direction: column; gap: 20px; }
 }
