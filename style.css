@@ -1,44 +1,50 @@
+/* --- ESTILOS GENERALES --- */
 body {
     background-color: #121212;
     color: white;
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
+    scroll-behavior: smooth; /* Para que al dar clic en el nav baje suavemente */
 }
 
-/* HERENCIA */
 section {
     color: #e0e0e0;
+    padding: 40px 0;
 }
 
-/* TITULOS */
 h1, h2 {
     text-align: center;
 }
 
-/* TEXTO BIENVENIDA */
 #inicio p {
     max-width: 800px;
     margin: auto;
     text-align: center;
 }
 
-/* HEADER */
+/* --- HEADER (Con Position Sticky y Flexbox) --- */
 header {
     background-color: black;
     padding: 20px;
-
     display: flex;
-    justify-content: space-between; /* separa */
-    align-items: center; /* centra vertical */
+    justify-content: space-between; 
+    align-items: center; 
     flex-wrap: wrap;
+    
+    /* NUEVO: Mantiene el menú arriba al bajar con el mouse */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 header h1 {
     color: #1DB954;
     margin: 0;
+    font-size: 1.5rem;
 }
 
-/* NAV FLEX */
+/* --- NAVEGACIÓN --- */
 nav {
     display: flex;
     gap: 20px;
@@ -48,20 +54,21 @@ nav a {
     color: inherit;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #1DB954;
 }
 
-/* MAIN */
+/* --- CONTENEDOR PRINCIPAL --- */
 main {
     padding: 30px;
     max-width: 1200px;
     margin: auto;
 }
 
-/* ARTISTAS  */
+/* --- ARTISTAS (Grid de tarjetas) --- */
 .contenedor-artistas {
     display: flex;
     flex-wrap: wrap;
@@ -69,7 +76,6 @@ main {
     gap: 20px;
 }
 
-/* TARJETAS */
 #artistas article {
     width: 300px;
     display: flex;
@@ -79,61 +85,44 @@ main {
     padding: 20px;
     border-radius: 10px;
     transition: 0.3s;
+    
+    /* NUEVO: Necesario para posicionar elementos dentro (como un badge si quisieras) */
+    position: relative; 
 }
 
 #artistas article:hover {
     background-color: #282828;
+    transform: translateY(-5px); /* Pequeña animación al pasar el mouse */
 }
 
 article h3 {
     color: #1DB954;
 }
 
-/* TEXTO IGUAL ALTURA */
 #artistas p {
-    min-height: 120px;
+    min-height: 100px; /* Ajustado para que no sea tan alto */
 }
 
-/* VIDEO */
+/* --- VIDEOS --- */
 iframe {
     width: 100%;
     height: 170px;
     border-radius: 10px;
     margin: 10px 0;
-}
-
-/* BOTONES */
-button {
-    background-color: #1DB954;
     border: none;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: #1ed760;
-}
-
-/* FOOTER */
-footer {
-    background-color: black;
-    text-align: center;
-    padding: 15px;
-    color: initial;
-}
-
-/* IMAGEN */
+/* --- IMAGEN CENTRAL --- */
 .imagen-centro {
     display: block;
     margin: 40px auto;
-    width: 400px;
+    width: 90%; /* Responsivo */
+    max-width: 400px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(30, 215, 96, 0.4);
 }
 
-/* PLAYLIST FLEX */
+/* --- PLAYLIST (Alineación Horizontal) --- */
 .playlist {
     list-style: none;
     padding: 0;
@@ -142,10 +131,9 @@ footer {
     gap: 15px;
 }
 
-/* CANCIONES */
 .cancion {
     display: flex;
-    align-items: center;
+    align-items: center; /* Centrado vertical interno */
     gap: 15px;
     background: #181818;
     padding: 15px;
@@ -155,101 +143,93 @@ footer {
 
 .cancion:hover {
     background: #282828;
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(29,185,84,0.3);
 }
 
 .cancion img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 8px;
     object-fit: cover;
 }
 
 .info {
-    flex: 1;
+    flex: 1; /* NUEVO: Ocupa todo el espacio sobrante */
 }
 
-/* BOTON PLAY */
-.btn-play {
-    background:#1DB954;
-    border:none;
-    padding:8px 15px;
-    border-radius:20px;
-    color:white;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.btn-play:hover {
-    background:#1ed760;
-}
-
-/* ESTRELLAS */
-.stars {
-    font-size: 30px;
-    cursor: pointer;
-    margin-top: 5px;
-}
-
-.star {
-    color: gray;
-    transition: 0.2s;
-}
-
-.star.selected {
-    color: #1DB954;
-}
-
-.star:hover {
-    transform: scale(1.2);
-}
-
-/* MENSAJE PLAYLIST */
-.mensaje-playlist {
-    background:#1db954;
-    color:white;
-    padding:10px;
-    border-radius:8px;
-    margin-top:10px;
-    opacity:0;
-    transition:0.4s;
-}
-
-.mensaje-playlist.mostrar {
-    opacity:1;
-}
-
-/* MENSAJE FORMULARIO */
-.mensaje-formulario {
-    background: #1DB954;
-    color: white;
-    padding: 12px;
-    border-radius: 8px;
-    margin-top: 15px;
-    opacity: 0;
-    transform: translateY(10px) scale(0.95);
-    transition: all 0.4s ease;
-    box-shadow: 0 0 15px rgba(30,215,96,0.5);
-    font-weight: bold;
-}
-
-.mensaje-formulario.mostrar {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-/* FORMULARIO FLEX */
+/* --- FORMULARIO (Alineación Flex) --- */
 #formulario form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
+    background: #181818;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 input {
-    padding: 8px;
+    padding: 10px;
     border-radius: 6px;
     border: none;
+    background: #333;
+    color: white;
+}
+
+button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ==========================================
+   MEDIA QUERIES (Diseño Responsivo)
+   ========================================== */
+
+/* Tabletas y Celulares grandes */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apila Título y Nav */
+        gap: 10px;
+    }
+
+    nav {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+    .cancion {
+        flex-direction: column; /* La playlist se vuelve vertical */
+        text-align: center;
+    }
+
+    .info {
+        margin-bottom: 10px;
+    }
+
+    #formulario form {
+        flex-direction: column; /* Formulario en columna */
+        align-items: stretch;
+    }
 }
