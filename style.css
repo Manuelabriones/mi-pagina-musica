@@ -18,7 +18,8 @@ section {
     color: #e0e0e0;
 }
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
 }
 
@@ -37,7 +38,7 @@ header {
     top: 0;
     z-index: 1000;
 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
@@ -138,6 +139,24 @@ button:hover {
     background-color: #1ed760;
 }
 
+#inicio button {
+    display: block;
+    margin: 25px auto;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    background: #1DB954;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#inicio button:hover {
+    transform: scale(1.05);
+    background: #1ed760;
+}
+
 /* ================================
    IMAGEN
 ================================ */
@@ -147,7 +166,7 @@ button:hover {
     width: 90%;
     max-width: 400px;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(30,215,96,0.4);
+    box-shadow: 0 0 20px rgba(30, 215, 96, 0.4);
 }
 
 /* ================================
@@ -175,7 +194,7 @@ button:hover {
 .cancion:hover {
     background: #282828;
     transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(29,185,84,0.3);
+    box-shadow: 0 0 15px rgba(29, 185, 84, 0.3);
 }
 
 .cancion img {
@@ -318,7 +337,7 @@ input {
     align-items: center;
     gap: 20px;
 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     width: 80%;
     max-width: 600px;
 }
@@ -348,6 +367,7 @@ input {
         gap: 20px;
     }
 }
+
 /* MOBILE */
 @media (max-width: 480px) {
     .cancion {
