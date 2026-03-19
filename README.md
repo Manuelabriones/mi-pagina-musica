@@ -2,27 +2,21 @@
 
 ## Descripción
 
-Este proyecto es una página web desarrollada con HTML, CSS y JavaScript. El objetivo es mostrar mis gustos musicales, incluyendo mis artistas favoritos, mi playlist personal y permitir que los usuarios interactúen reproduciendo canciones, calificando la playlist y recomendando música.
+Este proyecto es una landing page dinámica y responsiva dedicada a mi pasión por la música. Inspirada en la interfaz de **Spotify**, permite a los usuarios conocer a mis artistas favoritos, escuchar fragmentos de canciones, calificar una playlist interactiva y enviarme recomendaciones personales.
 
-Este proyecto fue creado como parte del Proyecto Final del módulo de desarrollo web en DEV.F, aplicando el uso de HTML semántico, control de versiones con Git y publicación en GitHub Pages.
-
+Este trabajo representa el **Proyecto Final** del módulo de desarrollo web en **DEV.F**, donde apliqué conocimientos de HTML semántico, CSS avanzado (Flexbox y Media Queries), JavaScript y control de versiones con Git.
 
 ## Características
 
-* Uso de etiquetas semánticas HTML como `header`, `main`, `section`, `article` y `footer`
-* Diseño visual inspirado en Spotify utilizando CSS
-* Imagen personalizada integrada al proyecto
-* Playlist con:
+* **HTML Semántico:** Estructura limpia y accesible utilizando etiquetas como `header`, `nav`, `main`, `section`, `article` y `footer`.
+* **Diseño Responsivo (Mobile-First):** Maquetación fluida con **Flexbox** y **Media Queries** para una experiencia óptima en móviles, tablets y computadoras de escritorio.
+* **Componentes Interactivos:**
+    * **Reproductor de Audio:** Sistema en JavaScript para reproducir y pausar fragmentos musicales.
+    * **Sistema de Calificación:** Calificación por estrellas dinámica para la playlist.
+    * **Formulario de Recomendación:** Validación nativa de datos para recibir sugerencias de canciones.
+* **Banner de Cookies:** Aviso legal implementado con posicionamiento fijo (`position: fixed`) y alta prioridad visual (`z-index`).
+* **Estética Profesional:** Paleta de colores basada en Spotify (oscuros y verde `#1DB954`), tipografía **Montserrat** desde Google Fonts y efectos de transición suaves.
 
-  * Portadas de canciones
-  * Reproducción de audio
-  * Sistema de calificación con estrellas
-* Videos integrados desde YouTube de artistas favoritos
-* Formulario interactivo para recomendar canciones
-* Animaciones visuales con CSS y JavaScript
-* Página publicada utilizando GitHub Pages
-
----
 
 ## Cómo ver el proyecto
 
@@ -34,19 +28,24 @@ https://github.com/Manuelabriones/mi-pagina-musica
 
 https://manuelabriones.github.io/mi-pagina-musica/
 
----
 
-## Tecnologías utilizadas
+## Tecnologías utilizadas 
 
-* HTML5
-* CSS3
-* JavaScript
-* Git
-* GitHub
-* GitHub Pages
+* **HTML5:** Estructura lógica y semántica.
+* **CSS3:** Estilos avanzados, Flexbox, Media Queries y animaciones.
+* **JavaScript:** Lógica de interacción y manipulación del DOM.
+* **Git & GitHub:** Control de versiones y gestión de historial de cambios.
+* **GitHub Pages:** Despliegue y hosting del sitio web.
 
 
+## Límites y próximos pasos 
 
-## Autor
-Manuela Briones Vela
+Aunque el proyecto cumple con los requisitos actuales, tengo planeado mejorar lo siguiente:
+1.  **Persistencia de datos:** Implementar `localStorage` para que las estrellas y recomendaciones no se borren al recargar la página.
+2.  **Modo Oscuro/Claro:** Añadir un switch de temas utilizando variables CSS.
+3.  **Integración de API:** Conectar la aplicación con la API real de Spotify para buscar artistas en tiempo real.
 
+
+## Autor 
+**Manuela Briones Vela** 
+*Estudiante de Desarrollo Web en DEV.F*
