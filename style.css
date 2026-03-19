@@ -331,6 +331,7 @@ input {
 /* ================================
    RESPONSIVE
 ================================ */
+/* TABLET */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -347,7 +348,7 @@ input {
         gap: 20px;
     }
 }
-
+/* MOBILE */
 @media (max-width: 480px) {
     .cancion {
         flex-direction: column;

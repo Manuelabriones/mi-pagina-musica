@@ -3,6 +3,12 @@
 let audioActual = null;
 let botonActual = null;
 
+function irAArtistas() {
+    document.getElementById("artistas").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
 function aceptarCookies() {
     const banner = document.getElementById("cookies");
     banner.style.display = "none";
